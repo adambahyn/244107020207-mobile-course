@@ -1,0 +1,3 @@
+* **Native vs Cross-Platform:** Saat aplikasi butuh performa maksimal, akses fitur perangkat keras mendalam/terbaru, integrasi API sistem yang kompleks (seperti AR, Bluetooth tingkat rendah), atau saat hanya menargetkan satu platform saja.
+* **State, Widget Tree, dan UI Deklaratif:** UI deklaratif menggambarkan tampilan berdasarkan data saat itu ($UI = f(state)$); saat *state* berubah, Flutter otomatis me-*rebuild* bagian *widget tree* yang relevan untuk menampilkan kondisi data terbaru.
+* **Commit Kecil dan Jelas:** Mempermudah pelacakan *bug* (*git bisect*), meminimalkan konflik (*merge conflict*) di tim, dan membuktikan riwayat kerja yang rapi serta terstruktur pada portofolio.
