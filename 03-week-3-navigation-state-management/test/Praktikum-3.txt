@@ -1,0 +1,9 @@
+4. Refleksikan: mengapa menampilkan ulang data lama (stale data) dengan indikator refresh kadang lebih baik daripada mengosongkan layar? Kapan pola itu penting?
+- state = AsyncLoading() mengosongkan layar → user kehilangan konteks, layout lompat, terasa lambat/rusak.
+- Menahan data lama + spinner kecil persisten: layar tetap terisi, user bisa baca/scroll sambil menunggu, transisi mulus.
+- Teknis: pakai AsyncValue.copyWithPrevious(state) / ref.watch(p.future) / state = AsyncLoading().copyWithPrevious(state) daripada AsyncLoading() polos; atau ref.invalidate (buang cache) vs ref.refresh (jaga sebelumnya).
+- Trade-off: data lama bisa menyesatkan kalau sudah kedaluwarsa — jadi stale-while-revalidate hanya cocok bila data lama masih kira-kira benar.
+
+Kapan penting
+
+Feed/berita, dashboard, harga/daftar produk, chat — apa pun yang (a) sering di-refresh, (b) punya banyak konten, (c) user sedang membaca/memilih. Tidak penting untuk data kritikal/real-time (saldo, transaksi) — di sana lebih baik blokir atau kosongkan dengan jelas.

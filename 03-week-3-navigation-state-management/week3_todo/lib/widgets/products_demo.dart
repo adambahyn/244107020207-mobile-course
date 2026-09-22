@@ -1,29 +1,15 @@
+// ============================================================================
+// ProductsPage — demo AsyncNotifier (Produk).
+//
+// Diambil dari project week3_todo2 dan digabungkan ke week3_todo supaya semua
+// materi minggu 3 ada dalam satu aplikasi. TIDAK di-wire ke router: route
+// aplikasi utama tetap `/` dan `/stats` saja. Halaman ini sengaja dibiarkan
+// berdiri sendiri karena delay 2 detik + kegagalan acak 30% tidak cocok
+// dijadikan halaman utama.
+// ============================================================================
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-void main() {
-  runApp(
-    const ProviderScope(
-      child: MyApp(),
-    ),
-  );
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Demo Riverpod Products',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const ProductPage(),
-    );
-  }
-}
 
 class ProductPage extends ConsumerWidget {
   const ProductPage({super.key});

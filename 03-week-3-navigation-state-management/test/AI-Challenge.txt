@@ -1,0 +1,10 @@
+1. Immutable? Ya — tidak ada state.add()/list.add(). build() mengembalikan list literal baru; state diganti lewat ref.invalidateSelf(), bukan dimutasi.
+2. ref.watch di build, ref.read di callback? Ya — ref.watch(statsProvider) hanya di build(); tombol retry memakai ref.read(statsProvider.notifier).retry().
+3. Ketiga state ditangani? Ya — loading: spinner, error: pesan + tombol "Coba lagi" (plus ikon), data: ListView.builder 3 item. Diuji juga di unit test (3 cabang).
+4. Provider bertipe eksplisit & tidak duplikat? Ya — final AsyncNotifierProvider<StatsNotifier, List<String>> statsProvider = ...; berbeda dari productsProvider di main.dart.
+5. API lama? Tidak — AsyncNotifier + ConsumerWidget tunggal; tanpa StateProvider, StateNotifierProvider, atau Consumer bertingkat. AsyncValue.when masih valid di Riverpod 3.4.3.
+6. PS C:\Kuliah\Tingkat 3\PEMMOB\03-week-3-navigation-state-management\week3_todo2> flutter analyze
+Analyzing week3_todo2...                                                
+No issues found! (ran in 6.7s)
+PS C:\Kuliah\Tingkat 3\PEMMOB\03-week-3-navigation-state-management\week3_todo2> flutter test
+00:05 +5: All tests passed!

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:week3_todo2/main.dart';
+import 'package:week3_todo/widgets/products_demo.dart';
 
 void main() {
   testWidgets('Test full flow: loading -> data display', (tester) async {
