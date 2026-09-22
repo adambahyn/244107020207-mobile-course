@@ -1,0 +1,14 @@
+1. TodoTile dipisahkan — week3_todo/lib/widgets/todo_tile.dart. TodoPage.build() sekarang hanya berisi Scaffold + bar filter + list; setiap baris menjadi ConsumerWidget tersendiri yang dapat diuji (test) secara terpisah.
+
+2. Provider turunan untuk filter — week3_todo/lib/providers/todo_provider.dart:
+- todoFilterProvider (Semua / Belum selesai / Selesai) memisahkan state "filter aktif" dari data todo.
+- filteredTodoListProvider = Provider> yang membaca todoListProvider + todoFilterProvider, melakukan kalkulasi ulang tanpa menyimpan state-nya sendiri.
+- Tambahan: todoStatsProvider → TodoStats (total/selesai/aktif/tingkat penyelesaian) untuk halaman /stats.
+
+3. GoRouter + NavigationBar — week3_todo/lib/main.dart: Menggunakan StatefulShellRoute.indexedStack yang berisi rute / → TodoPage, /stats → StatsPage (lib/pages/stats_page.dart), masing-masing cabang memiliki Navigator-nya sendiri sehingga state antar tab tetap terjaga.
+
+4. PS C:\Kuliah\Tingkat 3\PEMMOB\03-week-3-navigation-state-management\week3_todo> flutter test
+00:15 +23: All tests passed!
+PS C:\Kuliah\Tingkat 3\PEMMOB\03-week-3-navigation-state-management\week3_todo> flutter analyze
+Analyzing week3_todo...                                                 
+No issues found! (ran in 8.3s)
