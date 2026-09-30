@@ -505,10 +505,17 @@ lib/
     post_list_page.dart                  halaman Posts
     paged_post_page.dart                 halaman Posts berhalaman
 test/
+  post_test.dart                         4 test tugas (model + mock repo)
+  paged_posts_test.dart                  2 test pagination (tanpa internet)
   comment_model_test.dart                11 test (10 di antaranya kasus rusak)
+  post_tile_test.dart                    widget test PostTile
+  post_detail_provider_test.dart         5 test cache vs repository
+  post_detail_navigation_test.dart       widget test rute + parameter
   widget_test.dart                       2 widget test
 test_comment_repo_e2e.dart               5 test terhadap server sungguhan
 test_comment_provider_e2e.dart           3 test provider (data/error/validasi)
+docs/
+  testing-unit-test-mock-repository.md   hasil + verifikasi checklist Week 4
 ```
 
 ## Cara menjalankan
@@ -517,7 +524,26 @@ test_comment_provider_e2e.dart           3 test provider (data/error/validasi)
 cd 04-week-4-networking-rest-api/week4_api
 
 flutter analyze
-flutter test                                  # 13 test, tanpa jaringan
+flutter test                                  # 37 test, tanpa jaringan
 flutter test test_comment_repo_e2e.dart       # butuh internet
 flutter test test_comment_provider_e2e.dart   # butuh internet
 ```
+
+Hasil terakhir: `No issues found!` dan `37/37 All tests passed!`
+(detail + bukti per perintah: `docs/testing-unit-test-mock-repository.md`).
+
+## Mini project (Industry Challenge)
+
+Mini project Week 4 dikerjakan di `week4_api_tugas/` — aplikasi daftar post dari
+JSONPlaceholder dengan infinite scroll 10 item/halaman, empat state UI, Dio
+terpusat, dan `fromJson` aman null.
+
+```bash
+cd 04-week-4-networking-rest-api/week4_api_tugas
+flutter analyze && flutter test        # 19 test, tanpa internet
+flutter test test_live_api.dart        # 4 test, butuh internet
+```
+
+- Laporan + refleksi: `docs/mini-project-dan-refleksi.md`
+- Dokumentasi test codelab: `docs/testing-unit-test-mock-repository.md`
+- Screenshot 4 state: `screenshots/`
