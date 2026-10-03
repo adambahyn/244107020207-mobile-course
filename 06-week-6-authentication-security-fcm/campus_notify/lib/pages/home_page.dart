@@ -18,7 +18,7 @@ class _HomePageState extends ConsumerState<HomePage> {
   String? _accessMask;
   String? _tokenMask;
   String? _fcmStatus;
-  final int _refreshCount = 0;
+  String _refreshResult = '(belum dicoba)';
 
   @override
   void initState() {
@@ -58,6 +58,29 @@ class _HomePageState extends ConsumerState<HomePage> {
       });
     } catch (e) {
       if (mounted) setState(() => _fcmStatus = 'FCM gagal: $e');
+    }
+  }
+
+  /// Bukti nyata alur 401 -> refresh -> retry SEKALI.
+  /// Tidak ada backend kampus, jadi request diarahkan ke host yang tidak ada;
+  /// yang dibuktikan adalah interceptor TIDAK menggandakan request dan
+  /// membersihkan token saat refresh ikut gagal.
+  Future<void> _simulateUnauthorized() async {
+    final dio = ref.read(apiClientProvider);
+    final store = ref.read(tokenStoreProvider);
+    try {
+      await dio.get<dynamic>('/private/announcements');
+      if (mounted) setState(() => _refreshResult = 'sukses (200)');
+    } on Object catch (e) {
+      final stillLoggedIn = await store.readAccess() != null;
+      if (mounted) {
+        setState(
+          () => _refreshResult = stillLoggedIn
+              ? 'refresh gagal, token masih ada: ${e.runtimeType}'
+              : 'refresh gagal -> sesi dibersihkan (wajib login ulang)',
+        );
+      }
+      if (!stillLoggedIn) ref.read(authStateProvider.notifier).logout();
     }
   }
 
@@ -105,13 +128,13 @@ class _HomePageState extends ConsumerState<HomePage> {
           _row('Access token', _accessMask ?? '(memuat…)'),
           _row('Token FCM', _tokenMask ?? '(belum ada)'),
           _row('FCM', _fcmStatus ?? '(memuat…)'),
-          _row('Refresh 401', '$_refreshCount kali'),
+          _row('Refresh 401', _refreshResult),
           const SizedBox(height: 16),
           FilledButton.tonalIcon(
             key: const Key('simulate-401-button'),
             icon: const Icon(Icons.refresh),
             label: const Text('Simulasikan 401 + refresh'),
-            onPressed: () => ref.read(refreshCountProvider.notifier).bump(),
+            onPressed: _simulateUnauthorized,
           ),
           const SizedBox(height: 8),
           const Text(

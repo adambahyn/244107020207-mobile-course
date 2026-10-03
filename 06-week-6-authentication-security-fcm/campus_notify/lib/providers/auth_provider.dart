@@ -46,25 +46,3 @@ class AuthNotifier extends AsyncNotifier<bool> {
     ref.invalidateSelf();
   }
 }
-
-/// Token FCM terpotong untuk halaman Debug (jangan tampilkan token penuh).
-class FcmTokenNotifier extends Notifier<String?> {
-  @override
-  String? build() => null;
-  void set(String? value) => state = value;
-}
-
-final fcmTokenProvider = NotifierProvider<FcmTokenNotifier, String?>(
-  FcmTokenNotifier.new,
-);
-
-/// Jumlah request simulasi 401 untuk membuktikan refresh+retry berjalan.
-class RefreshCountNotifier extends Notifier<int> {
-  @override
-  int build() => 0;
-  void bump() => state = state + 1;
-}
-
-final refreshCountProvider = NotifierProvider<RefreshCountNotifier, int>(
-  RefreshCountNotifier.new,
-);
