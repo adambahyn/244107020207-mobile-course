@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html#7 -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#4F7DC9"><title>#05 | Local Storage &amp; Offline First</title>
+<link rel="stylesheet" href="./#05 _ Local Storage &amp; Offline First_files/css"><link rel="stylesheet" href="./#05 _ Local Storage &amp; Offline First_files/icon"><link rel="stylesheet" href="./#05 _ Local Storage &amp; Offline First_files/codelab-elements.css">
+<script src="./#05 _ Local Storage &amp; Offline First_files/analytics.js.download"></script></head><body cz-shortcut-listen="true">
+<google-codelab-analytics gaid="UA-49880327-14" codelab-gaid="G-H7507PFEJB" environment="web" category="null"></google-codelab-analytics>
+<google-codelab codelab-gaid="G-H7507PFEJB" id="05-minggu-5-local-storage-offline-first" environment="web" feedback-link="https://github.com/jti-polinema/flutter-codelab/issues" selected="7" google-codelab-ready="" codelab-title="#05 | Local Storage &amp; Offline First" anayltics-ready="anayltics-ready"><div id="drawer"><div class="codelab-time-container"><div class="time-remaining" title="Time remaining"><i class="material-icons">access_time</i>10 mins remaining</div></div><div class="steps"><ol><li completed=""><a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html#0"><span class="step"><span>Selamat datang</span></span></a></li><li completed=""><a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html#1"><span class="step"><span>Konsep local storage dan offline-first</span></span></a></li><li completed=""><a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html#2"><span class="step"><span>Praktikum 1: SharedPreferences</span></span></a></li><li completed=""><a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html#3"><span class="step"><span>Praktikum 2: SQLite dan repository catatan</span></span></a></li><li completed=""><a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html#4"><span class="step"><span>Praktikum 3: Cache-first dan antrean sync</span></span></a></li><li completed=""><a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html#5"><span class="step"><span>AI Challenge</span></span></a></li><li completed=""><a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html#6"><span class="step"><span>Refactoring, testing, dan error umum</span></span></a></li><li completed="" selected=""><a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html#7"><span class="step"><span>Tugas, refleksi, dan referensi</span></span></a></li></ol></div><div class="metadata"><a target="_blank" href="https://github.com/jti-polinema/flutter-codelab/issues"><i class="material-icons">bug_report</i> Report a mistake</a></div></div><div id="codelab-title"><div id="codelab-nav-buttons"><a href="https://jti-polinema.github.io/" id="arrow-back"><i class="material-icons">close</i></a><a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html#" id="menu"><i class="material-icons">menu</i></a></div><h1 is-upgraded="" class="title">#05 | Local Storage &amp; Offline First</h1><div class="codelab-time-container"><div class="time-remaining" title="Time remaining"><i class="material-icons">access_time</i>10 mins remaining</div></div><devsite-user></devsite-user></div><div id="main"><div id="steps"><google-codelab-step label="Selamat datang" duration="5" step="1"><div class="instructions"><div class="inner"><h2 is-upgraded="" class="step-title">1. Selamat datang</h2>
+<p><strong>Terakhir diperbarui:</strong> 18 September 2026<br></p>
+<p><a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html" lang="id">Bahasa Indonesia</a> | <a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index-en.html" lang="en">English</a></p>
+<h2 is-upgraded="">Tujuan pembelajaran</h2><p>Setelah menyelesaikan codelab ini, mahasiswa mampu:</p><ul>
+<li>menjelaskan perbedaan penyimpanan key-value, relasional, dan NoSQL di perangkat;</li><li>menyimpan preferensi sederhana (tema, terakhir dibuka) dengan SharedPreferences;</li><li>menerapkan CRUD catatan dengan SQLite (sqflite) melalui repository lokal;</li><li>menerapkan pola offline-first: cache-first read, dirty flag, dan antrean sinkronisasi;</li><li>menampilkan state loading, error, empty, dan success untuk data lokal dengan Riverpod;</li><li>menguji repository lokal dengan repository palsu (tanpa database sungguhan).</li></ul>
+<h2 is-upgraded="">Persiapan</h2><ul><li>Laptop/PC dan repository portfolio (GitHub/GitLab) dari minggu sebelumnya.</li><li>Flutter SDK, VS Code (ekstensi Flutter/Dart), emulator Android atau perangkat fisik.</li><li>Pemahaman Minggu 3 (Riverpod, AsyncValue) dan Minggu 4 (repository pattern, Dio).</li><li>Tidak perlu koneksi internet selama praktikum inti, justru Anda akan mensimulasikan offline.</li></ul>
+<aside class="warning"><p><strong>Kebijakan AI.</strong> Minggu 5 adalah materi lanjutan: AI boleh mengusulkan pilihan storage (SharedPreferences vs Hive vs SQLite vs Drift), tetapi Anda wajib membandingkan trade-off-nya, memilih yang paling sesuai kebutuhan aplikasi, dan mampu menjelaskan setiap keputusan teknis. Nilai ada pada kualitas perbandingan, verifikasi, dan dokumentasi bukan banyaknya kode hasil AI.</p></aside>
+</div></div></google-codelab-step><google-codelab-step label="Konsep local storage dan offline-first" duration="15" step="2"><div class="instructions"><div class="inner"><h2 is-upgraded="" class="step-title">2. Konsep local storage dan offline-first</h2>
+<h2 is-upgraded="">Jenis penyimpanan lokal</h2><p>Aturan praktis memilih storage:</p>
+<table><tbody><tr><th>Kebutuhan</th><th>Pilihan</th><th>Contoh</th></tr><tr><td>Pengaturan kecil key-value</td><td><code>SharedPreferences</code></td><td>tema gelap/terang, bahasa, waktu terakhir dibuka</td></tr><tr><td>Data terstruktur relasional</td><td><code>SQLite</code> via <code>sqflite</code></td><td>catatan, tugas, transaksi</td></tr><tr><td>NoSQL ringan embedded</td><td><code>Hive</code></td><td>cache objek, kotak (box) sederhana</td></tr><tr><td>Relasional reaktif &amp; type-safe</td><td><code>Drift</code></td><td>aplikasi besar dengan query kompleks + stream</td></tr></tbody></table>
+<p>Codelab ini memakai <code>SharedPreferences</code> + <code>SQLite (sqflite)</code>: kombinasi paling umum di industri untuk aplikasi offline notes. Tabel perbandingan Hive vs Drift wajib Anda isi pada AI Challenge sebagai bukti pengambilan keputusan.</p>
+<h2 is-upgraded="">Offline-first, bukan offline-only</h2><p>Offline-first berarti aplikasi <strong>selalu bisa dibaca dan ditulis</strong> meski tanpa internet, lalu <strong>disinkronkan</strong> saat koneksi kembali. Tiga mekanisme intinya:</p>
+<ul><li><strong>Cache-first read:</strong> tampilkan data lokal seketika, lalu refresh dari jaringan di background dan simpan hasilnya.</li><li><strong>Dirty flag:</strong> setiap perubahan lokal yang belum terkirim ditandai (<code>dirty = 1</code>) agar bisa di-sync belakangan.</li><li><strong>Antrean sinkronisasi:</strong> operasi tertunda diproses berurutan saat online; konflik diselesaikan dengan aturan eksplisit (misalnya <em>last-write-wins</em> berdasarkan <code>updated_at</code>).</li></ul>
+<pre><code><span class="pln">UI </span><span class="pun">(</span><span class="typ">ConsumerWidget</span><span class="pun">)</span><span class="pln"> </span><span class="pun">--</span><span class="pln">watch</span><span class="pun">--&gt;</span><span class="pln"> </span><span class="typ">Provider</span><span class="pln"> </span><span class="pun">(</span><span class="typ">AsyncValue</span><span class="pun">)</span><span class="pln">
+</span><span class="typ">Provider</span><span class="pln"> </span><span class="pun">--</span><span class="pln">panggil</span><span class="pun">--&gt;</span><span class="pln"> </span><span class="typ">LocalRepository</span><span class="pln"> </span><span class="pun">--</span><span class="pln">CRUD</span><span class="pun">--&gt;</span><span class="pln"> </span><span class="typ">SQLite</span><span class="pln">
+</span><span class="typ">LocalRepository</span><span class="pln"> </span><span class="pun">--</span><span class="pln">sync</span><span class="pun">--&gt;</span><span class="pln"> </span><span class="typ">Remote</span><span class="pln"> </span><span class="pun">(</span><span class="pln">simulasi</span><span class="pun">)</span><span class="pln"> </span><span class="pun">--</span><span class="pln">sukses</span><span class="pun">--&gt;</span><span class="pln"> dirty </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+</span><span class="typ">Cache</span><span class="pun">:</span><span class="pln"> baca lokal dulu</span><span class="pun">,</span><span class="pln"> refresh background</span><span class="pun">,</span><span class="pln"> simpan</span></code></pre>
+<h2 is-upgraded="">Repository untuk data lokal</h2><p>Aturan arsitektur yang sama seperti Minggu 4 tetap berlaku, hanya sumber datanya berubah:</p>
+<ul><li><strong>UI tidak boleh memanggil SQLite/SharedPreferences secara langsung.</strong> UI hanya membaca provider.</li><li><strong>Repository lokal</strong> adalah satu-satunya pintu ke database dan preferensi. Ia mengubah exception platform menjadi kegagalan bermakna bagi UI.</li><li><strong>Provider Riverpod</strong> mengekspos <code>AsyncValue</code> (loading/error/data) dan fungsi <code>invalidate</code> untuk refresh.</li></ul>
+<aside class="special"><p><strong>Mengapa tidak simpan semuanya di SharedPreferences?</strong> SharedPreferences hanya untuk nilai primitif kecil. Menyimpan daftar catatan sebagai satu string JSON di sana membuat query, update parsial, dan sinkronisasi menjadi rapuh dan lambat. Data koleksi selalu masuk database.</p></aside>
+</div></div></google-codelab-step><google-codelab-step label="Praktikum 1: SharedPreferences" duration="20" step="3"><div class="instructions"><div class="inner"><h2 is-upgraded="" class="step-title">3. Praktikum 1: SharedPreferences</h2>
+<h2 is-upgraded="">Siapkan project</h2>
+<pre><code><span class="pln">flutter create week5_offline_notes
+cd week5_offline_notes
+flutter pub </span><span class="kwd">add</span><span class="pln"> flutter_riverpod shared_preferences sqflite path</span></code></pre>
+<p>Struktur folder:</p>
+<pre><code><span class="pln">lib</span><span class="pun">/</span><span class="pln">
+</span><span class="pun">├──</span><span class="pln"> main</span><span class="pun">.</span><span class="pln">dart
+</span><span class="pun">├──</span><span class="pln"> data</span><span class="pun">/</span><span class="pln">
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> </span><span class="kwd">local</span><span class="pun">/</span><span class="pln">
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">dart
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">│</span><span class="pln">   </span><span class="pun">└──</span><span class="pln"> note</span><span class="pun">.</span><span class="pln">dart
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">├──</span><span class="pln"> prefs</span><span class="pun">.</span><span class="pln">dart
+</span><span class="pun">│</span><span class="pln">   </span><span class="pun">└──</span><span class="pln"> repositories</span><span class="pun">/</span><span class="pln">
+</span><span class="pun">│</span><span class="pln">       </span><span class="pun">└──</span><span class="pln"> note_repository</span><span class="pun">.</span><span class="pln">dart
+</span><span class="pun">└──</span><span class="pln"> pages</span><span class="pun">/</span><span class="pln">
+    </span><span class="pun">├──</span><span class="pln"> settings_page</span><span class="pun">.</span><span class="pln">dart
+    </span><span class="pun">└──</span><span class="pln"> notes_page</span><span class="pun">.</span><span class="pln">dart</span></code></pre>
+<h2 is-upgraded="">1. Repository preferensi</h2>
+<p>Buat <code>lib/data/prefs.dart</code>. Seluruh akses key-value terpusat di sini, bukan tersebar di widget:</p>
+<pre><code><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:shared_preferences/shared_preferences.dart'</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">PrefsRepository</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">const</span><span class="pln"> _darkModeKey </span><span class="pun">=</span><span class="pln"> </span><span class="str">'dark_mode'</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">const</span><span class="pln"> _lastOpenedKey </span><span class="pun">=</span><span class="pln"> </span><span class="str">'last_opened_at'</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="typ">Future</span><span class="str">&lt;bool&gt;</span><span class="pln"> getDarkMode</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> prefs </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> </span><span class="typ">SharedPreferences</span><span class="pun">.</span><span class="pln">getInstance</span><span class="pun">();</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> prefs</span><span class="pun">.</span><span class="pln">getBool</span><span class="pun">(</span><span class="pln">_darkModeKey</span><span class="pun">)</span><span class="pln"> </span><span class="pun">??</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="typ">Future</span><span class="str">&lt;void&gt;</span><span class="pln"> setDarkMode</span><span class="pun">(</span><span class="kwd">bool</span><span class="pln"> </span><span class="kwd">value</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> prefs </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> </span><span class="typ">SharedPreferences</span><span class="pun">.</span><span class="pln">getInstance</span><span class="pun">();</span><span class="pln">
+    </span><span class="kwd">await</span><span class="pln"> prefs</span><span class="pun">.</span><span class="pln">setBool</span><span class="pun">(</span><span class="pln">_darkModeKey</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">value</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="typ">Future</span><span class="str">&lt;void&gt;</span><span class="pln"> markOpenedNow</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> prefs </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> </span><span class="typ">SharedPreferences</span><span class="pun">.</span><span class="pln">getInstance</span><span class="pun">();</span><span class="pln">
+    </span><span class="kwd">await</span><span class="pln"> prefs</span><span class="pun">.</span><span class="pln">setString</span><span class="pun">(</span><span class="pln">_lastOpenedKey</span><span class="pun">,</span><span class="pln"> </span><span class="typ">DateTime</span><span class="pun">.</span><span class="pln">now</span><span class="pun">().</span><span class="pln">toIso8601String</span><span class="pun">());</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="typ">Future</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">?&gt;</span><span class="pln"> getLastOpened</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> prefs </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> </span><span class="typ">SharedPreferences</span><span class="pun">.</span><span class="pln">getInstance</span><span class="pun">();</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> prefs</span><span class="pun">.</span><span class="pln">getString</span><span class="pun">(</span><span class="pln">_lastOpenedKey</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<h2 is-upgraded="">2. Provider dan halaman pengaturan</h2>
+<p>Contoh penyambungan minimal dengan Riverpod di <code>lib/pages/settings_page.dart</code>:</p>
+<pre><code><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:flutter/material.dart'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:flutter_riverpod/flutter_riverpod.dart'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="str">'../data/prefs.dart'</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">final</span><span class="pln"> prefsRepositoryProvider </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Provider</span><span class="pun">((</span><span class="kwd">ref</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="typ">PrefsRepository</span><span class="pun">());</span><span class="pln">
+</span><span class="kwd">final</span><span class="pln"> darkModeProvider </span><span class="pun">=</span><span class="pln">
+    </span><span class="typ">AsyncNotifierProvider</span><span class="pun">&lt;</span><span class="typ">DarkModeNotifier</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">bool</span><span class="pun">&gt;(</span><span class="typ">DarkModeNotifier</span><span class="pun">.</span><span class="kwd">new</span><span class="pun">);</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">DarkModeNotifier</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">AsyncNotifier</span><span class="str">&lt;bool&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="lit">@override</span><span class="pln">
+  </span><span class="typ">Future</span><span class="str">&lt;bool&gt;</span><span class="pln"> build</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln">
+      </span><span class="kwd">ref</span><span class="pun">.</span><span class="pln">watch</span><span class="pun">(</span><span class="pln">prefsRepositoryProvider</span><span class="pun">).</span><span class="pln">getDarkMode</span><span class="pun">();</span><span class="pln">
+
+  </span><span class="typ">Future</span><span class="str">&lt;void&gt;</span><span class="pln"> toggle</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> </span><span class="kwd">next</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">!(</span><span class="pln">state</span><span class="pun">.</span><span class="kwd">value</span><span class="pln"> </span><span class="pun">??</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln">
+    state </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">const</span><span class="pln"> </span><span class="typ">AsyncLoading</span><span class="pun">();</span><span class="pln">
+    state </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> </span><span class="typ">AsyncValue</span><span class="pun">.</span><span class="pln">guard</span><span class="pun">(()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">await</span><span class="pln"> </span><span class="kwd">ref</span><span class="pun">.</span><span class="pln">read</span><span class="pun">(</span><span class="pln">prefsRepositoryProvider</span><span class="pun">).</span><span class="pln">setDarkMode</span><span class="pun">(</span><span class="kwd">next</span><span class="pun">);</span><span class="pln">
+      </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">next</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<aside class="special"><p><strong>Kesalahan umum:</strong> memanggil <code>SharedPreferences.getInstance()</code> di dalam <code>build()</code> widget. Selalu bungkus di repository + provider agar hasilnya ter-cache dan mudah diuji.</p></aside>
+</div></div></google-codelab-step><google-codelab-step label="Praktikum 2: SQLite dan repository catatan" duration="30" step="4"><div class="instructions"><div class="inner"><h2 is-upgraded="" class="step-title">4. Praktikum 2: SQLite dan repository catatan</h2>
+<h2 is-upgraded="">1. Model catatan</h2>
+<p>Buat <code>lib/data/local/note.dart</code>. Field <code>dirty</code> menandai catatan yang belum tersinkron:</p>
+<pre><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Note</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">const</span><span class="pln"> </span><span class="typ">Note</span><span class="pun">({</span><span class="pln">
+    </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">id</span><span class="pun">,</span><span class="pln">
+    required </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">title</span><span class="pun">,</span><span class="pln">
+    </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">body </span><span class="pun">=</span><span class="pln"> </span><span class="str">''</span><span class="pun">,</span><span class="pln">
+    required </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">updatedAt</span><span class="pun">,</span><span class="pln">
+    </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">dirty </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+
+  </span><span class="kwd">final</span><span class="pln"> </span><span class="kwd">int</span><span class="pun">?</span><span class="pln"> id</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> title</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> body</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">DateTime</span><span class="pln"> updatedAt</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">final</span><span class="pln"> </span><span class="kwd">bool</span><span class="pln"> dirty</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="typ">Map</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Object</span><span class="pun">?&gt;</span><span class="pln"> toMap</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">'id'</span><span class="pun">:</span><span class="pln"> id</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">'title'</span><span class="pun">:</span><span class="pln"> title</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">'body'</span><span class="pun">:</span><span class="pln"> body</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">'updated_at'</span><span class="pun">:</span><span class="pln"> updatedAt</span><span class="pun">.</span><span class="pln">toIso8601String</span><span class="pun">(),</span><span class="pln">
+        </span><span class="str">'dirty'</span><span class="pun">:</span><span class="pln"> dirty </span><span class="pun">?</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln">
+      </span><span class="pun">};</span><span class="pln">
+
+  factory </span><span class="typ">Note</span><span class="pun">.</span><span class="pln">fromMap</span><span class="pun">(</span><span class="typ">Map</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Object</span><span class="pun">?&gt;</span><span class="pln"> map</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Note</span><span class="pun">(</span><span class="pln">
+      id</span><span class="pun">:</span><span class="pln"> </span><span class="pun">(</span><span class="pln">map</span><span class="pun">[</span><span class="str">'id'</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> num</span><span class="pun">?)?.</span><span class="pln">toInt</span><span class="pun">(),</span><span class="pln">
+      title</span><span class="pun">:</span><span class="pln"> map</span><span class="pun">[</span><span class="str">'title'</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> </span><span class="typ">String</span><span class="pun">?</span><span class="pln"> </span><span class="pun">??</span><span class="pln"> </span><span class="str">''</span><span class="pun">,</span><span class="pln">
+      body</span><span class="pun">:</span><span class="pln"> map</span><span class="pun">[</span><span class="str">'body'</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> </span><span class="typ">String</span><span class="pun">?</span><span class="pln"> </span><span class="pun">??</span><span class="pln"> </span><span class="str">''</span><span class="pun">,</span><span class="pln">
+      updatedAt</span><span class="pun">:</span><span class="pln"> </span><span class="typ">DateTime</span><span class="pun">.</span><span class="pln">tryParse</span><span class="pun">(</span><span class="pln">map</span><span class="pun">[</span><span class="str">'updated_at'</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> </span><span class="typ">String</span><span class="pun">?</span><span class="pln"> </span><span class="pun">??</span><span class="pln"> </span><span class="str">''</span><span class="pun">)</span><span class="pln"> </span><span class="pun">??</span><span class="pln">
+          </span><span class="typ">DateTime</span><span class="pun">.</span><span class="pln">fromMillisecondsSinceEpoch</span><span class="pun">(</span><span class="lit">0</span><span class="pun">),</span><span class="pln">
+      dirty</span><span class="pun">:</span><span class="pln"> </span><span class="pun">((</span><span class="pln">map</span><span class="pun">[</span><span class="str">'dirty'</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> num</span><span class="pun">?)?.</span><span class="pln">toInt</span><span class="pun">()</span><span class="pln"> </span><span class="pun">??</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<h2 is-upgraded="">2. Pembuka database</h2>
+<p>Buat <code>lib/data/local/db.dart</code>. Satu fungsi pembuka dipakai seluruh repository:</p>
+<pre><code><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:path/path.dart'</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> p</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:sqflite/sqflite.dart'</span><span class="pun">;</span><span class="pln">
+
+</span><span class="typ">Future</span><span class="pun">&lt;</span><span class="typ">Database</span><span class="pun">&gt;</span><span class="pln"> openNotesDb</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">final</span><span class="pln"> dir </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> getDatabasesPath</span><span class="pun">();</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> openDatabase</span><span class="pun">(</span><span class="pln">
+    p</span><span class="pun">.</span><span class="kwd">join</span><span class="pun">(</span><span class="pln">dir</span><span class="pun">,</span><span class="pln"> </span><span class="str">'offline_notes.db'</span><span class="pun">),</span><span class="pln">
+    version</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+    onCreate</span><span class="pun">:</span><span class="pln"> </span><span class="pun">(</span><span class="pln">db</span><span class="pun">,</span><span class="pln"> version</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">await</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">execute</span><span class="pun">(</span><span class="str">'''
+        CREATE TABLE notes(
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          title TEXT NOT NULL,
+          body TEXT NOT NULL DEFAULT '',
+          updated_at TEXT NOT NULL,
+          dirty INTEGER NOT NULL DEFAULT 0
+        )
+      '''</span><span class="pun">);</span><span class="pln">
+      </span><span class="kwd">await</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">execute</span><span class="pun">(</span><span class="str">'''
+        CREATE TABLE cached_posts(
+          id INTEGER PRIMARY KEY,
+          payload TEXT NOT NULL,
+          cached_at TEXT NOT NULL
+        )
+      '''</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+  </span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<h2 is-upgraded="">3. Repository sebagai satu-satunya pintu data</h2>
+<p>Buat <code>lib/data/repositories/note_repository.dart</code>:</p>
+<pre><code><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:sqflite/sqflite.dart'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="str">'../local/db.dart'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="str">'../local/note.dart'</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">NoteRepository</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="typ">NoteRepository</span><span class="pun">({</span><span class="typ">Future</span><span class="pun">&lt;</span><span class="typ">Database</span><span class="pun">&gt;</span><span class="pln"> </span><span class="typ">Function</span><span class="pun">()?</span><span class="pln"> openDb</span><span class="pun">})</span><span class="pln">
+      </span><span class="pun">:</span><span class="pln"> _openDb </span><span class="pun">=</span><span class="pln"> openDb </span><span class="pun">??</span><span class="pln"> openNotesDb</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Future</span><span class="pun">&lt;</span><span class="typ">Database</span><span class="pun">&gt;</span><span class="pln"> </span><span class="typ">Function</span><span class="pun">()</span><span class="pln"> _openDb</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="typ">Future</span><span class="pun">&lt;</span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Note</span><span class="pun">&gt;&gt;</span><span class="pln"> fetchNotes</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> _openDb</span><span class="pun">();</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> rows </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">query</span><span class="pun">(</span><span class="str">'notes'</span><span class="pun">,</span><span class="pln"> orderBy</span><span class="pun">:</span><span class="pln"> </span><span class="str">'updated_at DESC'</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> rows</span><span class="pun">.</span><span class="pln">map</span><span class="pun">(</span><span class="typ">Note</span><span class="pun">.</span><span class="pln">fromMap</span><span class="pun">).</span><span class="pln">toList</span><span class="pun">();</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="typ">Future</span><span class="pun">&lt;</span><span class="typ">Note</span><span class="pun">&gt;</span><span class="pln"> addNote</span><span class="pun">({</span><span class="pln">required </span><span class="typ">String</span><span class="pln"> title</span><span class="pun">,</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> body </span><span class="pun">=</span><span class="pln"> </span><span class="str">''</span><span class="pun">})</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> _openDb</span><span class="pun">();</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> note </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Note</span><span class="pun">(</span><span class="pln">
+      title</span><span class="pun">:</span><span class="pln"> title</span><span class="pun">,</span><span class="pln">
+      body</span><span class="pun">:</span><span class="pln"> body</span><span class="pun">,</span><span class="pln">
+      updatedAt</span><span class="pun">:</span><span class="pln"> </span><span class="typ">DateTime</span><span class="pun">.</span><span class="pln">now</span><span class="pun">(),</span><span class="pln">
+      dirty</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> id </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">insert</span><span class="pun">(</span><span class="str">'notes'</span><span class="pun">,</span><span class="pln"> note</span><span class="pun">.</span><span class="pln">toMap</span><span class="pun">());</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Note</span><span class="pun">(</span><span class="pln">
+      id</span><span class="pun">:</span><span class="pln"> id</span><span class="pun">,</span><span class="pln">
+      title</span><span class="pun">:</span><span class="pln"> note</span><span class="pun">.</span><span class="pln">title</span><span class="pun">,</span><span class="pln">
+      body</span><span class="pun">:</span><span class="pln"> note</span><span class="pun">.</span><span class="pln">body</span><span class="pun">,</span><span class="pln">
+      updatedAt</span><span class="pun">:</span><span class="pln"> note</span><span class="pun">.</span><span class="pln">updatedAt</span><span class="pun">,</span><span class="pln">
+      dirty</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="typ">Future</span><span class="str">&lt;void&gt;</span><span class="pln"> deleteNote</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> id</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> _openDb</span><span class="pun">();</span><span class="pln">
+    </span><span class="kwd">await</span><span class="pln"> db</span><span class="pun">.</span><span class="kwd">delete</span><span class="pun">(</span><span class="str">'notes'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">where</span><span class="pun">:</span><span class="pln"> </span><span class="str">'id = ?'</span><span class="pun">,</span><span class="pln"> whereArgs</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">id</span><span class="pun">]);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="typ">Future</span><span class="str">&lt;int&gt;</span><span class="pln"> countDirty</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> _openDb</span><span class="pun">();</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> rows </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">rawQuery</span><span class="pun">(</span><span class="pln">
+        </span><span class="str">'SELECT COUNT(*) AS c FROM notes WHERE dirty = 1'</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">((</span><span class="pln">rows</span><span class="pun">.</span><span class="pln">first</span><span class="pun">[</span><span class="str">'c'</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> num</span><span class="pun">?)?.</span><span class="pln">toInt</span><span class="pun">()</span><span class="pln"> </span><span class="pun">??</span><span class="pln"> </span><span class="lit">0</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="typ">Future</span><span class="str">&lt;void&gt;</span><span class="pln"> markAllSynced</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> db </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> _openDb</span><span class="pun">();</span><span class="pln">
+    </span><span class="kwd">await</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">update</span><span class="pun">(</span><span class="str">'notes'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="str">'dirty'</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">},</span><span class="pln"> </span><span class="kwd">where</span><span class="pun">:</span><span class="pln"> </span><span class="str">'dirty = 1'</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<aside class="special"><p><strong>Mengapa constructor menerima <code>openDb</code>?</strong> Agar test bisa menyuntikkan database palsu/in-memory tanpa menyentuh SQLite sungguhan. Pola injeksi ini dipakai lagi di Minggu 12 (Testing &amp; QA).</p></aside>
+<h2 is-upgraded="">4. Halaman catatan offline</h2>
+<p>Catatan tersimpan di perangkat, jadi halaman ini <strong>tetap berfungsi penuh dalam mode pesawat</strong>. Tampilkan badge jumlah catatan yang belum tersinkron (<code>dirty</code>) sebagai indikator antrean sync.</p>
+</div></div></google-codelab-step><google-codelab-step label="Praktikum 3: Cache-first dan antrean sync" duration="20" step="5"><div class="instructions"><div class="inner"><h2 is-upgraded="" class="step-title">5. Praktikum 3: Cache-first dan antrean sync</h2>
+<h2 is-upgraded="">1. Cache-first read untuk data API</h2><p>Gunakan kembali endpoint Minggu 4 (<code>GET /posts</code> JSONPlaceholder). Alurnya: tampilkan cache lokal seketika, refresh dari jaringan di background, simpan hasilnya untuk kunjungan berikutnya:</p>
+<pre><code><span class="typ">Future</span><span class="pun">&lt;</span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Post</span><span class="pun">&gt;&gt;</span><span class="pln"> loadPostsCacheFirst</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">final</span><span class="pln"> cached </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> readCachedPosts</span><span class="pun">();</span><span class="pln"> </span><span class="com">// dari tabel cached_posts</span><span class="pln">
+  </span><span class="com">// 1. Segera kembalikan cache agar UI tidak blank saat offline.</span><span class="pln">
+  </span><span class="com">// 2. Di background: fetch Dio -&gt; simpan ke cached_posts -&gt; invalidate provider.</span><span class="pln">
+  refreshPostsInBackground</span><span class="pun">();</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> cached</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<h2 is-upgraded="">2. Sinkronisasi catatan kotor (dirty)</h2>
+<p>Karena codelab ini belum punya backend tulis, simulasikan server dengan delay. Yang dinilai adalah <strong>mekanismenya</strong>, bukan servernya:</p>
+<pre><code><span class="typ">Future</span><span class="str">&lt;int&gt;</span><span class="pln"> syncNotes</span><span class="pun">(</span><span class="typ">NoteRepository</span><span class="pln"> repo</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">final</span><span class="pln"> dirtyCount </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> repo</span><span class="pun">.</span><span class="pln">countDirty</span><span class="pun">();</span><span class="pln">
+  </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">dirtyCount </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+  </span><span class="com">// Simulasi upload: pada project nyata, kirim tiap catatan dirty</span><span class="pln">
+  </span><span class="com">// ke REST API di sini, lalu tandai bersih bila server menjawab 2xx.</span><span class="pln">
+  </span><span class="kwd">await</span><span class="pln"> </span><span class="typ">Future</span><span class="pun">.</span><span class="pln">delayed</span><span class="pun">(</span><span class="kwd">const</span><span class="pln"> </span><span class="typ">Duration</span><span class="pun">(</span><span class="pln">seconds</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">));</span><span class="pln">
+  </span><span class="kwd">await</span><span class="pln"> repo</span><span class="pun">.</span><span class="pln">markAllSynced</span><span class="pun">();</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> dirtyCount</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<h2 is-upgraded="">3. Simulasi offline yang deterministik</h2>
+<p>Selain mode pesawat sungguhan, sediakan toggle <code>forceOffline</code> pada provider agar demo dan testing tidak bergantung pada kondisi Wi-Fi kelas:</p>
+<ul><li>Matikan Wi-Fi / aktifkan mode pesawat, buka kembali aplikasi: catatan tetap tampil, badge dirty tetap akurat.</li><li>Nyalakan kembali koneksi, jalankan <code>syncNotes</code>: badge kembali ke 0.</li><li>Tuliskan langkah dan hasil observasi Anda (screenshot sebelum/sesudah) ke folder <code>screenshots/</code>.</li></ul>
+<aside class="warning"><p><strong>Aturan konflik:</strong> tetapkan dan dokumentasikan satu aturan, misalnya <em>last-write-wins</em> berdasarkan <code>updated_at</code>. Tanpa aturan eksplisit, sinkronisasi dua arah akan menimpa data secara diam-diam.</p></aside>
+</div></div></google-codelab-step><google-codelab-step label="AI Challenge" duration="15" step="6"><div class="instructions"><div class="inner"><h2 is-upgraded="" class="step-title">6. AI Challenge</h2>
+<h2 is-upgraded="">Peran AI pada codelab ini</h2><p>AI boleh mengusulkan pilihan storage, tetapi <strong>Anda yang memutuskan</strong>. Nilai ada pada kualitas perbandingan dan justifikasi, bukan pada kode yang dihasilkan AI.</p>
+<h2 is-upgraded="">AI Prompt Challenge</h2>
+<p>Minta AI coding assistant (Cursor, Copilot, Claude Code, atau tool setara) dengan prompt berikut:</p>
+<pre><code><span class="typ">Aplikasi</span><span class="pln"> </span><span class="typ">Flutter</span><span class="pln"> </span><span class="typ">Offline</span><span class="pln"> </span><span class="typ">Notes</span><span class="pun">:</span><span class="pln"> CRUD catatan </span><span class="pun">+</span><span class="pln"> preferensi tema</span><span class="pun">.</span><span class="pln">
+</span><span class="typ">Bandingkan</span><span class="pln"> </span><span class="typ">SharedPreferences</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Hive</span><span class="pun">,</span><span class="pln"> sqflite </span><span class="pun">(</span><span class="typ">SQLite</span><span class="pun">),</span><span class="pln"> dan </span><span class="typ">Drift</span><span class="pln">
+untuk dua kebutuhan ini</span><span class="pun">.</span><span class="pln"> </span><span class="typ">Requirements</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="pln"> </span><span class="typ">Kriteria</span><span class="pun">:</span><span class="pln"> kompleksitas query</span><span class="pun">,</span><span class="pln"> kebutuhan relasi</span><span class="pun">,</span><span class="pln"> reaktivitas </span><span class="pun">(</span><span class="pln">stream</span><span class="pun">),</span><span class="pln">
+  type</span><span class="pun">-</span><span class="pln">safety</span><span class="pun">,</span><span class="pln"> ukuran boilerplate</span><span class="pun">,</span><span class="pln"> dan kemudahan testing</span><span class="pun">.</span><span class="pln">
+</span><span class="pun">-</span><span class="pln"> </span><span class="typ">Beri</span><span class="pln"> rekomendasi </span><span class="kwd">final</span><span class="pun">:</span><span class="pln"> mana untuk preferensi</span><span class="pun">,</span><span class="pln"> mana untuk catatan</span><span class="pun">,</span><span class="pln">
+  beserta alasannya dalam </span><span class="lit">1</span><span class="pln"> tabel</span><span class="pun">.</span><span class="pln">
+</span><span class="pun">-</span><span class="pln"> </span><span class="typ">Tunjukkan</span><span class="pln"> skema tabel</span><span class="pun">/</span><span class="pln">kotak untuk </span><span class="lit">1000</span><span class="pun">+</span><span class="pln"> catatan</span><span class="pun">.</span><span class="pln">
+</span><span class="typ">Jelaskan</span><span class="pln"> trade</span><span class="pun">-</span><span class="pln">off setiap pilihan</span><span class="pun">.</span></code></pre>
+<h2 is-upgraded="">AI Verification Checklist</h2>
+<p>Sebelum rekomendasi AI diterima, verifikasi dan catat temuan Anda di README:</p>
+<ul><li>Apakah AI menempatkan daftar catatan di SharedPreferences? (menolak: rapuh untuk koleksi).</li><li>Apakah skema AI mendukung antrean sync (dirty flag / updated_at) atau hanya CRUD polos?</li><li>Apakah klaim "real-time" AI didukung stream (Drift/watch) atau hanya asumsi?</li><li>Apakah estimasi boilerplate AI masuk akal setelah Anda mencoba instalasinya (<code>flutter pub add</code> + migrasi skema)?</li><li>Keputusan final Anda beserta alasannya, boleh berbeda dari rekomendasi AI selama berargumen.</li></ul>
+<aside class="special"><p><strong>Tanggung jawab teknis:</strong> simpan prompt yang digunakan, output awal AI, tabel perbandingan final, dan hasil testing pada folder <code>docs/</code> tugas minggu ini. Saat demo, Anda harus mampu menjelaskan mengapa kombinasi SharedPreferences + SQLite dipilih.</p></aside>
+</div></div></google-codelab-step><google-codelab-step label="Refactoring, testing, dan error umum" duration="15" step="7"><div class="instructions"><div class="inner"><h2 is-upgraded="" class="step-title">7. Refactoring, testing, dan error umum</h2>
+<h2 is-upgraded="">Refactoring Challenge</h2>
+<p>Lakukan refactoring berikut pada project catatan Anda, lalu commit dengan pesan yang jelas:</p>
+<ol type="1">
+<li>Ekstrak baris catatan menjadi widget <code>NoteTile</code> tersendiri yang menampilkan badge "belum tersinkron" bila <code>dirty == true</code>.</li><li>Pindahkan logika cache posts dan <code>syncNotes</code> ke file <code>lib/data/sync.dart</code> agar repository tetap fokus pada CRUD.</li><li>Tambahkan halaman detail catatan dengan GoRouter (<code>/note/:id</code>) yang membaca dari repository lokal, bukan dari state halaman list.</li>
+</ol>
+<h2 is-upgraded="">Testing: unit test model + repository palsu</h2>
+<p>Buat <code>test/note_test.dart</code>. Uji mapping aman null dan provider dengan repository palsu (tanpa SQLite sungguhan):</p>
+<pre><code><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:flutter_test/flutter_test.dart'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:flutter_riverpod/flutter_riverpod.dart'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:week5_offline_notes/data/local/note.dart'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:week5_offline_notes/data/repositories/note_repository.dart'</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">FakeNoteRepository</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">NoteRepository</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="typ">FakeNoteRepository</span><span class="pun">({</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">items </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">const</span><span class="pln"> </span><span class="pun">[],</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">throwError </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">})</span><span class="pln">
+      </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">super</span><span class="pun">(</span><span class="pln">openDb</span><span class="pun">:</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">throw</span><span class="pln"> </span><span class="typ">UnimplementedError</span><span class="pun">());</span><span class="pln">
+
+  </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Note</span><span class="pun">&gt;</span><span class="pln"> items</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">final</span><span class="pln"> </span><span class="kwd">bool</span><span class="pln"> throwError</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="lit">@override</span><span class="pln">
+  </span><span class="typ">Future</span><span class="pun">&lt;</span><span class="typ">List</span><span class="pun">&lt;</span><span class="typ">Note</span><span class="pun">&gt;&gt;</span><span class="pln"> fetchNotes</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">throwError</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">throw</span><span class="pln"> </span><span class="typ">Exception</span><span class="pun">(</span><span class="str">'db locked (simulasi)'</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> items</span><span class="pun">;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="lit">@override</span><span class="pln">
+  </span><span class="typ">Future</span><span class="str">&lt;int&gt;</span><span class="pln"> countDirty</span><span class="pun">()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln">
+      </span><span class="typ">Future</span><span class="pun">.</span><span class="kwd">value</span><span class="pun">(</span><span class="pln">items</span><span class="pun">.</span><span class="kwd">where</span><span class="pun">((</span><span class="pln">n</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> n</span><span class="pun">.</span><span class="pln">dirty</span><span class="pun">).</span><span class="pln">length</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">void</span><span class="pln"> main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  test</span><span class="pun">(</span><span class="str">'fromMap aman terhadap field yang hilang'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> note </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Note</span><span class="pun">.</span><span class="pln">fromMap</span><span class="pun">({</span><span class="str">'title'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Belanja'</span><span class="pun">});</span><span class="pln">
+    expect</span><span class="pun">(</span><span class="pln">note</span><span class="pun">.</span><span class="pln">title</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Belanja'</span><span class="pun">);</span><span class="pln">
+    expect</span><span class="pun">(</span><span class="pln">note</span><span class="pun">.</span><span class="pln">body</span><span class="pun">,</span><span class="pln"> </span><span class="str">''</span><span class="pun">);</span><span class="pln">
+    expect</span><span class="pun">(</span><span class="pln">note</span><span class="pun">.</span><span class="pln">dirty</span><span class="pun">,</span><span class="pln"> isFalse</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+
+  test</span><span class="pun">(</span><span class="str">'flag dirty bertahan pada serialisasi'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> note </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Note</span><span class="pun">(</span><span class="pln">
+      title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'a'</span><span class="pun">,</span><span class="pln">
+      updatedAt</span><span class="pun">:</span><span class="pln"> </span><span class="typ">DateTime</span><span class="pun">(</span><span class="lit">2026</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9</span><span class="pun">,</span><span class="pln"> </span><span class="lit">18</span><span class="pun">),</span><span class="pln">
+      dirty</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> restored </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Note</span><span class="pun">.</span><span class="pln">fromMap</span><span class="pun">(</span><span class="pln">note</span><span class="pun">.</span><span class="pln">toMap</span><span class="pun">());</span><span class="pln">
+    expect</span><span class="pun">(</span><span class="pln">restored</span><span class="pun">.</span><span class="pln">dirty</span><span class="pun">,</span><span class="pln"> isTrue</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+
+  test</span><span class="pun">(</span><span class="str">'provider sukses dengan repository palsu'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> container </span><span class="pun">=</span><span class="pln"> </span><span class="typ">ProviderContainer</span><span class="pun">(</span><span class="pln">
+      overrides</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        noteRepositoryProvider</span><span class="pun">.</span><span class="pln">overrideWithValue</span><span class="pun">(</span><span class="pln">
+          </span><span class="typ">FakeNoteRepository</span><span class="pun">(</span><span class="pln">items</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+            </span><span class="typ">Note</span><span class="pun">(</span><span class="pln">title</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Tes'</span><span class="pun">,</span><span class="pln"> updatedAt</span><span class="pun">:</span><span class="pln"> </span><span class="typ">DateTime</span><span class="pun">.</span><span class="pln">now</span><span class="pun">()),</span><span class="pln">
+          </span><span class="pun">]),</span><span class="pln">
+        </span><span class="pun">),</span><span class="pln">
+      </span><span class="pun">],</span><span class="pln">
+    </span><span class="pun">);</span><span class="pln">
+    addTearDown</span><span class="pun">(</span><span class="pln">container</span><span class="pun">.</span><span class="pln">dispose</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> notes </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">await</span><span class="pln"> container</span><span class="pun">.</span><span class="pln">read</span><span class="pun">(</span><span class="pln">notesProvider</span><span class="pun">.</span><span class="pln">future</span><span class="pun">);</span><span class="pln">
+    expect</span><span class="pun">(</span><span class="pln">notes</span><span class="pun">.</span><span class="pln">length</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+    expect</span><span class="pun">(</span><span class="pln">notes</span><span class="pun">.</span><span class="pln">first</span><span class="pun">.</span><span class="pln">title</span><span class="pun">,</span><span class="pln"> </span><span class="str">'Tes'</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+
+  test</span><span class="pun">(</span><span class="str">'provider error dengan repository palsu'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="kwd">async</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> container </span><span class="pun">=</span><span class="pln"> </span><span class="typ">ProviderContainer</span><span class="pun">(</span><span class="pln">
+      overrides</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        noteRepositoryProvider</span><span class="pun">.</span><span class="pln">overrideWithValue</span><span class="pun">(</span><span class="pln">
+          </span><span class="typ">FakeNoteRepository</span><span class="pun">(</span><span class="pln">throwError</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">),</span><span class="pln">
+        </span><span class="pun">),</span><span class="pln">
+      </span><span class="pun">],</span><span class="pln">
+    </span><span class="pun">);</span><span class="pln">
+    addTearDown</span><span class="pun">(</span><span class="pln">container</span><span class="pun">.</span><span class="pln">dispose</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">await</span><span class="pln"> expectLater</span><span class="pun">(</span><span class="pln">
+      container</span><span class="pun">.</span><span class="pln">read</span><span class="pun">(</span><span class="pln">notesProvider</span><span class="pun">.</span><span class="pln">future</span><span class="pun">),</span><span class="pln">
+      throwsA</span><span class="pun">(</span><span class="pln">isA</span><span class="pun">&lt;</span><span class="typ">Exception</span><span class="pun">&gt;()),</span><span class="pln">
+    </span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p>Jalankan:</p>
+<pre><code><span class="pln">flutter analyze
+flutter test</span></code></pre>
+<h2 is-upgraded="">Error umum dan solusinya</h2>
+<table><tbody><tr><th>Gejala</th><th>Penyebab umum</th><th>Solusi</th></tr><tr><td><code>MissingPluginException</code> untuk shared_preferences/sqflite</td><td>Hot restart setelah tambah plugin tanpa rebuild penuh</td><td>Hentikan aplikasi, jalankan ulang <code>flutter run</code> (bukan hot reload)</td></tr><tr><td><code>databaseException: table notes already exists</code></td><td><code>onCreate</code> dijalankan dua kali / versi tidak naik setelah ubah skema</td><td>Naikkan <code>version</code> + implementasikan <code>onUpgrade</code>, atau uninstall aplikasi saat dev</td></tr><tr><td>Badge dirty tidak pernah nol</td><td><code>markAllSynced</code> tidak dipanggil setelah sync sukses</td><td>Panggil hanya setelah "server" menjawab sukses; uji dengan <code>countDirty</code></td></tr><tr><td>UI tidak refresh setelah tambah catatan</td><td>Lupa <code>ref.invalidate(notesProvider)</code> setelah mutasi</td><td>Invalidasi provider di repository caller, bukan di widget acak</td></tr><tr><td>Test menyentuh database sungguhan</td><td>Repository asli dipakai di test</td><td>Gunakan <code>FakeNoteRepository</code> via override seperti contoh di atas</td></tr></tbody></table>
+<h2 is-upgraded="">Checklist verifikasi mandiri</h2>
+<ul><li>UI tidak memanggil SQLite/SharedPreferences langsung; semua lewat repository + provider.</li><li>Aplikasi penuh berfungsi dalam mode pesawat: baca, tambah, hapus catatan.</li><li>Badge dirty akurat sebelum/sesudah sync; cache posts tampil tanpa internet.</li><li><code>flutter analyze</code> tanpa issue dan semua test lulus.</li><li>Hasil AI diverifikasi dan didokumentasikan pada folder <code>docs/</code>.</li></ul>
+</div></div></google-codelab-step><google-codelab-step label="Tugas, refleksi, dan referensi" duration="10" step="8" selected=""><div class="instructions"><div class="inner"><h2 is-upgraded="" class="step-title">8. Tugas, refleksi, dan referensi</h2>
+<h2 is-upgraded="">Mini project / Industry Challenge</h2>
+<p>Bangun <strong>aplikasi Offline Notes</strong> sebagai tugas minggu ini (kembangkan project codelab atau buat baru):</p>
+<ol type="1">
+<li>Preferensi: toggle tema gelap/terang + waktu terakhir dibuka via SharedPreferences.</li><li>CRUD catatan persisten via SQLite (sqflite) melalui repository lokal + Riverpod; daftar diurutkan <code>updated_at</code> terbaru.</li><li>Offline-first: cache-first untuk data bacaan, dirty flag + <code>syncNotes</code> untuk tulisan, dan aturan konflik eksplisit yang didokumentasikan.</li><li>Buktikan mode pesawat: screenshot daftar catatan saat offline dan badge dirty sebelum/sesudah sync.</li><li>Sertakan minimal 2 test yang lulus (1 unit test model + 1 test provider dengan repository palsu).</li><li>Kerjakan bagian AI Challenge dan dokumentasikan prompt, tabel perbandingan storage, keputusan final, serta alasan teknis Anda di <code>docs/</code>.</li><li>Push ke repository portfolio pada folder <code>05-week-5-local-storage-offline-first/</code> dengan struktur <code>lib/</code>, <code>test/</code>, <code>docs/</code>, <code>README.md</code>, dan <code>screenshots/</code>. README menjelaskan tujuan, fitur utama, stack teknologi, cara menjalankan, dan hasil yang dicapai.</li>
+</ol>
+<h2 is-upgraded="">Refleksi</h2>
+<ul><li>Mengapa daftar catatan tidak boleh disimpan di SharedPreferences? Apa yang rusak jika aturan ini dilanggar?</li><li>Kapan cache-first cukup, dan kapan Anda membutuhkan strategi lain (misalnya network-first untuk data harga real-time)?</li><li>Bagaimana dirty flag berubah menjadi antrean sync tanpa memblokir UI? Kapan antrean terpisah (tabel outbox) menjadi perlu?</li><li>Bagian mana dari rekomendasi AI yang Anda tolak, dan mengapa?</li></ul>
+<h2 is-upgraded="">Referensi pendukung</h2>
+<ul>
+  <li><a href="https://jti-polinema.github.io/flutter-codelab/00-slides/Week_05_Local_Storage_Offline_First.html" target="_blank">Slide Week 5: Local Storage &amp; Offline First</a></li>
+<li><a href="https://docs.flutter.dev/cookbook/persistence/key-value" target="_blank">Flutter cookbook: Store key-value data</a></li>
+<li><a href="https://pub.dev/packages/shared_preferences" target="_blank">shared_preferences package</a></li>
+<li><a href="https://pub.dev/packages/sqflite" target="_blank">sqflite package</a></li>
+<li><a href="https://pub.dev/packages/hive" target="_blank">Hive package (alternatif NoSQL)</a></li>
+<li><a href="https://pub.dev/packages/drift" target="_blank">Drift package (alternatif reaktif)</a></li>
+<li><a href="https://riverpod.dev/docs/concepts/async_notifiers" target="_blank">Riverpod: AsyncNotifier dan AsyncValue</a></li>
+<li><a href="https://learnxinyminutes.com/dart/" target="_blank">Learn Dart in Y Minutes</a></li>
+</ul>
+</div></div></google-codelab-step></div><div id="controls"><div id="fabs"><a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html#" id="previous-step" title="Previous step">Back</a><div class="spacer"></div><a href="https://jti-polinema.github.io/flutter-codelab/05-minggu-5-local-storage-offline-first/index.html#" id="next-step" title="Next step" hidden="">Next</a><a href="https://jti-polinema.github.io/" id="done" title="Codelab complete">Done</a></div></div></div></google-codelab>
+<script src="./#05 _ Local Storage &amp; Offline First_files/native-shim.js.download"></script><script src="./#05 _ Local Storage &amp; Offline First_files/custom-elements.min.js.download"></script><script src="./#05 _ Local Storage &amp; Offline First_files/prettify.js.download"></script><script src="./#05 _ Local Storage &amp; Offline First_files/codelab-elements.js.download"></script><script src="./#05 _ Local Storage &amp; Offline First_files/api.js.download"></script>
+
+</body></html>
