@@ -1,0 +1,13 @@
+$ rg -n "Dio\(|openDatabase|getDatabasesPath|FlutterSecureStorage|SharedPreferences\.getInstance|jsonDecode" lib/features/*/presentation
+[exit=1 -> 1 berarti nol hasil]
+
+$ rg -n "import 'package:flutter|import 'package:dio|import 'package:sqflite|import 'package:firebase" lib/features/*/domain lib/core
+[exit=1 -> 1 berarti nol hasil]
+
+$ rg -n "RepositoryImpl\(|Dio\(BaseOptions" lib/features/*/presentation/pages
+[exit=1 -> 1 berarti nol hasil di halaman]
+
+$ rg -n "RepositoryImpl\(|Dio\(BaseOptions" lib/features/*/presentation
+lib/features/auth/presentation\providers\auth_providers.dart:13:  (ref) => AuthRepositoryImpl(ref.watch(tokenStoreProvider)),
+lib/features/announcements/presentation\providers\announcement_providers.dart:11:  (ref) => const AnnouncementRepositoryImpl(source: AnnouncementLocalSource()),
+[exit=0 -> hanya di berkas providers, titik wiring DI]
