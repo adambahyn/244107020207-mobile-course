@@ -1,0 +1,14 @@
+
+This was caught by the test expectation on the following line:
+  file:///C:/Kuliah/Tingkat%203/PEMMOB/09-week-9-ai-assisted-development/campus_notify/test/announcement_search_persistence_test.dart line 60
+The test description was:
+  query tidak tertinggal setelah halaman dibuka ulang
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:02 +0 -1: query tidak tertinggal setelah halaman dibuka ulang [E]
+  Test failed. See exception logs above.
+  The test description was: query tidak tertinggal setelah halaman dibuka ulang
+  
+00:02 +0 -1: Some tests failed.
+
+Failing tests:
+  C:/Kuliah/Tingkat 3/PEMMOB/09-week-9-ai-assisted-development/campus_notify/test/announcement_search_persistence_test.dart: query tidak tertinggal setelah halaman dibuka ulang
