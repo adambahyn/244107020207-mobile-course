@@ -1,0 +1,6 @@
+=== 10-01-asisten-kosong.png
+8:38 | As i sten AI | Kunci: sk-airo-bR****** | KB'S | 0/20 | Tanyakan jadwal, layanan, atau pengumuman | kampus. Jangan kirim data pribadi seperti NIK | atau nomor telepon. | Tanya seputar kampus
+=== 10-02-asisten-jawaban.png
+8:45 | As i sten AI | Kunci: sk-airo-bR****** | KB/S | 1/20 | Jam layanan akademik berapa? | Jam layanan akademik Polinema | umumnya mengikuti jam kerja: Senin- | Kamis pukul 08.00-16.00 dan Jumat | pukul 08.00-11.00, dengan jeda istirahat | sesuai ketentuan. Untuk kepastian jadwal | terbaru, silakan cek kanal resmi Polinema | atau unit layanan akademik. | Tanya seputar kampus
+=== 10-03-asisten-offline-fallback.png
+8:46 | As i sten AI | Kunci: sk-airo-bR****** | 4.5G | 2/20 | Jam layanan akademik berapa? | Jam layanan akademik Polinema | umumnya mengikuti jam kerja: Senin- | Kamis pukul 08.00-16.00 dan Jumat | pukul 08.00-11.00, dengan jeda istirahat | sesuai ketentuan. Untuk kepastian jadwal | terbaru, silakan cek kanal resmi Polinema | atau unit layanan akademik. | Apakah perpustakaan buka hari Sabtu? | Tidak ada koneksi internet. Mode | offline: pengumuman tetap dapat | dibuka. | Tanya seputar kampus | Coba lagi

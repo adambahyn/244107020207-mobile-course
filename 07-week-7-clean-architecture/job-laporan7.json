@@ -8,6 +8,15 @@
    }
   },
   {
+   "command": "styles.modify",
+   "params": {
+    "style": "Laporan Caption",
+    "chr": {
+     "size": 10
+    }
+   }
+  },
+  {
    "command": "caret.set",
    "params": {
     "pos": {
@@ -213,25 +222,22 @@
    }
   },
   {
-   "command": "para.style",
-   "params": {
-    "style": "Laporan SelHeader"
-   }
-  },
-  {
    "command": "text.insert",
    "params": {
     "text": "Berkas"
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan SelHeader"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -240,7 +246,7 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
@@ -249,19 +255,25 @@
    }
   },
   {
+   "command": "text.tab"
+  },
+  {
    "command": "text.insert",
    "params": {
     "text": "Masalah"
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
-    "style": "Laporan Sel"
+    "style": "Laporan SelHeader"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -270,13 +282,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -285,13 +300,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -300,13 +318,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -315,13 +336,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -330,13 +354,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -345,13 +372,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -360,13 +390,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -375,13 +408,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -390,13 +426,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -405,13 +444,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -420,13 +462,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -435,13 +480,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -450,13 +498,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -465,13 +516,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -480,13 +534,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -495,13 +552,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -510,7 +570,7 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
@@ -519,9 +579,21 @@
    }
   },
   {
+   "command": "text.tab"
+  },
+  {
    "command": "text.insert",
    "params": {
     "text": "fungsi murni tersimpan di folder messaging sehingga helper murni tersebar"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
    }
   },
   {
@@ -545,6 +617,30 @@
     "kind": "all",
     "width": 0.5,
     "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      1,
+      1,
+      4
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
    }
   },
   {
@@ -3144,25 +3240,22 @@
    }
   },
   {
-   "command": "para.style",
-   "params": {
-    "style": "Laporan SelHeader"
-   }
-  },
-  {
    "command": "text.insert",
    "params": {
     "text": "Pemeriksaan"
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan SelHeader"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3171,7 +3264,7 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
@@ -3180,19 +3273,25 @@
    }
   },
   {
+   "command": "text.tab"
+  },
+  {
    "command": "text.insert",
    "params": {
     "text": "Hasil"
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
-    "style": "Laporan Sel"
+    "style": "Laporan SelHeader"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3201,13 +3300,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3216,13 +3318,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3231,13 +3336,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3246,13 +3354,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3261,13 +3372,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3276,13 +3390,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3291,13 +3408,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3306,13 +3426,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3321,13 +3444,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3336,13 +3462,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3351,7 +3480,7 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
@@ -3360,9 +3489,21 @@
    }
   },
   {
+   "command": "text.tab"
+  },
+  {
    "command": "text.insert",
    "params": {
     "text": "dua hasil, keduanya titik wiring DI"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
    }
   },
   {
@@ -3386,6 +3527,30 @@
     "kind": "all",
     "width": 0.5,
     "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      3,
+      1,
+      4
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
    }
   },
   {
@@ -3599,10 +3764,16 @@
    "command": "text.newParagraph"
   },
   {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
    "command": "insert.picture",
    "params": {
     "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\07-week-7-clean-architecture\\screenshots\\fig\\figura-01-login.png",
-    "width": 413.9
+    "width": 311.78865834004836
    }
   },
   {
@@ -3624,10 +3795,16 @@
    "command": "text.newParagraph"
   },
   {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
    "command": "insert.picture",
    "params": {
     "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\07-week-7-clean-architecture\\screenshots\\fig\\figura-02-home.png",
-    "width": 413.9
+    "width": 311.78865834004836
    }
   },
   {
@@ -3649,10 +3826,16 @@
    "command": "text.newParagraph"
   },
   {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
    "command": "insert.picture",
    "params": {
     "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\07-week-7-clean-architecture\\screenshots\\fig\\figura-03-detail.png",
-    "width": 413.9
+    "width": 311.78865834004836
    }
   },
   {
@@ -3674,10 +3857,16 @@
    "command": "text.newParagraph"
   },
   {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
    "command": "insert.picture",
    "params": {
     "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\07-week-7-clean-architecture\\screenshots\\fig\\figura-04-401.png",
-    "width": 413.9
+    "width": 311.78865834004836
    }
   },
   {
@@ -3699,10 +3888,16 @@
    "command": "text.newParagraph"
   },
   {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
    "command": "insert.picture",
    "params": {
     "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\07-week-7-clean-architecture\\screenshots\\fig\\figura-05-logout.png",
-    "width": 413.9
+    "width": 311.78865834004836
    }
   },
   {
@@ -3860,25 +4055,22 @@
    }
   },
   {
-   "command": "para.style",
-   "params": {
-    "style": "Laporan SelHeader"
-   }
-  },
-  {
    "command": "text.insert",
    "params": {
     "text": "Berkas lama"
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan SelHeader"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3887,7 +4079,7 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
@@ -3896,19 +4088,25 @@
    }
   },
   {
+   "command": "text.tab"
+  },
+  {
    "command": "text.insert",
    "params": {
     "text": "Berkas baru"
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
-    "style": "Laporan Sel"
+    "style": "Laporan SelHeader"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3917,13 +4115,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3932,13 +4133,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3947,13 +4151,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3962,13 +4169,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3977,13 +4187,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -3992,13 +4205,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4007,13 +4223,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4022,13 +4241,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4037,13 +4259,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4052,13 +4277,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4067,13 +4295,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4082,13 +4313,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4097,13 +4331,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4112,13 +4349,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4127,13 +4367,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4142,13 +4385,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4157,13 +4403,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4172,13 +4421,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4187,13 +4439,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4202,13 +4457,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4217,13 +4475,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4232,13 +4493,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4247,7 +4511,7 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
@@ -4256,9 +4520,21 @@
    }
   },
   {
+   "command": "text.tab"
+  },
+  {
    "command": "text.insert",
    "params": {
     "text": "core/format.dart pada fungsi routeFromMessage"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
    }
   },
   {
@@ -4282,6 +4558,30 @@
     "kind": "all",
     "width": 0.5,
     "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      1,
+      1,
+      4
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
    }
   },
   {
@@ -4700,25 +5000,22 @@
    }
   },
   {
-   "command": "para.style",
-   "params": {
-    "style": "Laporan SelHeader"
-   }
-  },
-  {
    "command": "text.insert",
    "params": {
     "text": "Usulan AI"
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan SelHeader"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4727,7 +5024,7 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
@@ -4736,19 +5033,25 @@
    }
   },
   {
+   "command": "text.tab"
+  },
+  {
    "command": "text.insert",
    "params": {
     "text": "Alasan teknis"
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
-    "style": "Laporan Sel"
+    "style": "Laporan SelHeader"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4757,13 +5060,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4772,13 +5078,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4787,13 +5096,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4802,13 +5114,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4817,13 +5132,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4832,13 +5150,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4847,13 +5168,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4862,13 +5186,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4877,13 +5204,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4892,13 +5222,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4907,13 +5240,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4922,13 +5258,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4937,13 +5276,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4952,13 +5294,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4967,13 +5312,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4982,13 +5330,16 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
    "params": {
     "style": "Laporan Sel"
    }
+  },
+  {
+   "command": "text.tab"
   },
   {
    "command": "text.insert",
@@ -4997,7 +5348,7 @@
    }
   },
   {
-   "command": "text.tab"
+   "command": "select.paragraph"
   },
   {
    "command": "para.style",
@@ -5006,9 +5357,21 @@
    }
   },
   {
+   "command": "text.tab"
+  },
+  {
    "command": "text.insert",
    "params": {
     "text": "domain tetap murni Dart sehingga use case diuji tanpa perangkat"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
    }
   },
   {
@@ -5032,6 +5395,30 @@
     "kind": "all",
     "width": 0.5,
     "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      4,
+      1,
+      4
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
    }
   },
   {

@@ -7,6 +7,24 @@ wadah, lalu menulis job-laporan8.json yang dijalankan wordcraft-cli.
 import json
 import os
 
+MAXW_CM, MAXH_CM = 14.83, 12.5    # batas isi sel & tinggi (celah halaman maks 12,5 cm)
+
+
+def _ratio(path):
+    """rasio lebar/tinggi PNG tanpa PIL (baca IHDR)."""
+    with open(path, "rb") as f:
+        head = f.read(26)
+    if head[:8] != b"\x89PNG\r\n\x1a\n":
+        return 0.75
+    w, h = struct.unpack(">II", head[16:24])
+    return w / h
+
+
+def _w_pt(path):
+    ar = _ratio(path)
+    return min(MAXW_CM, MAXH_CM * ar) * 28.3465
+import struct
+
 WEEK = os.path.dirname(os.path.abspath(__file__))
 DOCX = os.path.join(WEEK, "Laporan Jobsheet Minggu 8 - Adam Bahy Maulana.docx")
 PDF = DOCX[:-5] + ".pdf"
@@ -43,8 +61,8 @@ def code(text):
 
 
 def img(name, caption, width=414.0):
-    CUR.append({"k": "img", "path": os.path.join(SHOT, name), "cap": caption,
-                "w": width})
+    path = os.path.join(SHOT, name)
+    CUR.append({"k": "img", "path": path, "cap": caption, "w": _w_pt(path)})
 
 
 def tbl(title, header, rows):
@@ -406,21 +424,30 @@ def C(command, **params):
     return {"command": command, "params": params} if params else {"command": command}
 
 
-def fill_table_ops(ops_list):
+def fill_table_ops(tb, row, ops_list):
     out = []
+    paras = 1          # blok 0 = paragraf pertama sel
     for op in ops_list:
         k = op["k"]
         if k == "p":
             out.append(C("para.style", style=STYLE_ID[op["s"]]))
             out.append(C("text.insert", text=op["t"]))
             out.append(C("text.newParagraph"))
+            paras += 1
         elif k == "img":
+            # paragraf gambar jangan mewarisi style Caption (spasi before/after
+            # caption bikin celah kosong sebelum gambar)
+            out.append(C("para.style", style=STYLE["Sel"]))
             out.append(C("insert.picture", path=op["path"], width=op["w"]))
             out.append(C("text.newParagraph"))
             out.append(C("para.style", style=STYLE["Caption"]))
             out.append(C("text.insert", text=op["cap"]))
             out.append(C("text.newParagraph"))
+            paras += 2
         else:
+            # blok paras = judul, paras+1 = tabel, paras+2 = paragraf kosong
+            # otomatis setelah tabel. DILARANG caret.set mundur ke judul:
+            # insert.table di paragraf berisi teks menghasilkan tabel rusak.
             out.append(C("para.style", style=STYLE["Tabel Judul"]))
             out.append(C("text.insert", text=op["title"]))
             out.append(C("text.newParagraph"))
@@ -432,15 +459,22 @@ def fill_table_ops(ops_list):
             for ri, r in enumerate(cells):
                 for v in r:
                     n += 1
+                    out.append(C("text.insert", text=v))
+                    out.append(C("select.paragraph"))
                     out.append(C("para.style",
                                  style=STYLE["SelHeader"] if ri == 0 else STYLE["Sel"]))
-                    out.append(C("text.insert", text=v))
                     if n < total:
                         out.append(C("text.tab"))
             out.append(C("table.selectTable"))
             out.append(C("table.autofit", mode="fixed"))
             out.append(C("table.columnWidth", width=420.6 / ncol))
             out.append(C("table.borders", kind="all", width=0.5, color="808080"))
+            out.append(C("caret.set",
+                         pos={"story": "body", "path": [tb, row, 1, paras + 2],
+                              "off": 0}))
+            out.append(C("select.paragraph"))
+            out.append(C("para.style", style=STYLE["Sel"]))
+            paras += 2
     return out
 
 
@@ -461,6 +495,8 @@ def build():
             data[sec].append({"label": label, "ops": list(CUR)})
 
     cmds = [C("file.setAuthor", name="Hermes via MCP"),
+            # caption 10 pt: 9 pt terlalu kecil di cetak (lihat ATURAN-LAPORAN.md)
+            C("styles.modify", style=STYLE["Caption"], chr={"size": 10}),
             C("caret.set", pos=pos(0, 0, 2)),
             C("select.paragraph"),
             C("text.insert", text="PEMOB"),
@@ -489,7 +525,7 @@ def build():
             cmds.append(C("text.insert", text=step["label"]))
             cmds.append(C("caret.set", pos=pos(tb, i, 1)))
             cmds.append(C("select.paragraph"))
-            ops = fill_table_ops(step["ops"])
+            ops = fill_table_ops(tb, i, step["ops"])
             while ops and ops[-1]["command"] == "text.newParagraph":
                 ops.pop()
             cmds.extend(ops)

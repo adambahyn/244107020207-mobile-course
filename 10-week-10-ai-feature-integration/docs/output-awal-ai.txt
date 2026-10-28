@@ -1,0 +1,6 @@
+# Keluaran mentah API Inferhub (model combo/uu)
+# finish_reason=stop
+# usage={"completion_tokens": 234, "completion_tokens_details": {"reasoning_tokens": 117, "text_tokens": 116}, "cost": 1e-05, "prompt_tokens": 126, "prompt_tokens_details": {"cached_tokens": 0, "image_tokens": 0, "text_tokens": 126}, "total_tokens": 360}
+# waktu permintaan (diukur curl): 30.11 detik
+
+Arsitektur dapat dibagi menjadi lapisan UI/widget chat, state management, repository/service, serta backend API gateway yang meneruskan permintaan ke penyedia AI. API key jangan disimpan di aplikasi Flutter, melainkan di server/secret manager dan diakses melalui backend kampus. Untuk menekan biaya, gunakan caching jawaban umum, batasi token dan panjang konteks, terapkan rate limit/kuota, pilih model lebih murah untuk pertanyaan sederhana, serta monitor pemakaian per fitur.

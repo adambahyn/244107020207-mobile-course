@@ -1,0 +1,9 @@
+$ dart format --output=none --set-exit-if-changed lib test
+Formatted 42 files (0 changed) in 0.37 seconds.
+
+$ flutter analyze
+Analyzing campus_notify...                                      
+No issues found! (ran in 83.6s)
+
+$ flutter test
+00:15 +37: All tests passed!

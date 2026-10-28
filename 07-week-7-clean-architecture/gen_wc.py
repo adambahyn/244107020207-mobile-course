@@ -7,6 +7,24 @@ diganti perekam, jadi tidak ada teks yang diketik ulang di sini.
 import json
 import os
 
+MAXW_CM, MAXH_CM = 14.83, 12.5    # batas isi sel & tinggi (celah halaman maks 12,5 cm)
+
+
+def _ratio(path):
+    """rasio lebar/tinggi PNG tanpa PIL (baca IHDR)."""
+    with open(path, "rb") as f:
+        head = f.read(26)
+    if head[:8] != b"\x89PNG\r\n\x1a\n":
+        return 0.75
+    w, h = struct.unpack(">II", head[16:24])
+    return w / h
+
+
+def _w_pt(path):
+    ar = _ratio(path)
+    return min(MAXW_CM, MAXH_CM * ar) * 28.3465
+import struct
+
 import isi_laporan7 as B
 
 WEEK = os.path.dirname(os.path.abspath(__file__))
@@ -44,7 +62,8 @@ def code(cell, text):
 
 
 def img(cell, path, caption, width=14.6):
-    CUR.append({"k": "img", "path": path, "cap": _num(caption)})
+    CUR.append({"k": "img", "path": path, "cap": _num(caption),
+                "w": _w_pt(path)})
 
 
 def tbl(cell, title, header, rows):
@@ -70,7 +89,7 @@ def C(command, **params):
 
 def fill_table_ops(tb, row, ops_list):
     out = []
-    paras = 1          # paragraf pertama sel sudah ada
+    paras = 1          # paragraf pertama sel sudah ada (blok 0)
     for op in ops_list:
         k = op["k"]
         if k == "p":
@@ -79,13 +98,19 @@ def fill_table_ops(tb, row, ops_list):
             out.append(C("text.newParagraph"))
             paras += 1
         elif k == "img":
-            out.append(C("insert.picture", path=op["path"], width=413.9))
+            # paragraf gambar jangan mewarisi style Caption (spasi before/after
+            # caption bikin celah kosong sebelum gambar)
+            out.append(C("para.style", style=STYLE["Sel"]))
+            out.append(C("insert.picture", path=op["path"], width=op["w"]))
             out.append(C("text.newParagraph"))
             out.append(C("para.style", style=STYLE["Caption"]))
             out.append(C("text.insert", text=op["cap"]))
             out.append(C("text.newParagraph"))
             paras += 2
         else:
+            # blok paras = judul, paras+1 = tabel, paras+2 = paragraf kosong
+            # otomatis sesudah tabel. DILARANG caret.set mundur ke judul:
+            # insert.table di paragraf berisi teks menghasilkan tabel rusak.
             out.append(C("para.style", style=STYLE["Tabel Judul"]))
             out.append(C("text.insert", text=op["title"]))
             out.append(C("text.newParagraph"))
@@ -98,16 +123,22 @@ def fill_table_ops(tb, row, ops_list):
             for ri, r in enumerate(cells):
                 for v in r:
                     n += 1
+                    out.append(C("text.insert", text=v))
+                    out.append(C("select.paragraph"))
                     out.append(C("para.style",
                                  style=STYLE["SelHeader"] if ri == 0 else STYLE["Sel"]))
-                    out.append(C("text.insert", text=v))
                     if n < total:
                         out.append(C("text.tab"))
             out.append(C("table.selectTable"))
             out.append(C("table.autofit", mode="fixed"))
             out.append(C("table.columnWidth", width=420.6 / ncol))
             out.append(C("table.borders", kind="all", width=0.5, color="808080"))
-            # tabel selalu blok terakhir di sel: tidak ada isi setelahnya
+            out.append(C("caret.set",
+                         pos={"story": "body", "path": [tb, row, 1, paras + 1],
+                              "off": 0}))
+            out.append(C("select.paragraph"))
+            out.append(C("para.style", style=STYLE["Sel"]))
+            paras += 1
     return out
 
 
@@ -126,6 +157,8 @@ def build():
             data[sec].append({"label": label, "ops": list(CUR)})
 
     cmds = [C("file.setAuthor", name="Hermes via MCP"),
+            # caption 10 pt: 9 pt terlalu kecil di cetak (lihat ATURAN-LAPORAN.md)
+            C("styles.modify", style=STYLE["Caption"], chr={"size": 10}),
             C("caret.set", pos=pos(0, 0, 2)),
             C("select.paragraph"),
             C("text.insert", text="PEMOB"),

@@ -1,0 +1,6438 @@
+{
+ "file": "C:/Kuliah/Tingkat 3/PEMMOB/10-week-10-ai-feature-integration/Laporan Jobsheet Minggu 10 - Adam Bahy Maulana.docx",
+ "commands": [
+  {
+   "command": "file.setAuthor",
+   "params": {
+    "name": "Hermes via MCP"
+   }
+  },
+  {
+   "command": "styles.modify",
+   "params": {
+    "style": "Laporan Caption",
+    "chr": {
+     "size": 10
+    }
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      0,
+      0,
+      2,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "PEMOB"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      0,
+      6,
+      2,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "10"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      2
+     ],
+     "off": 14
+    }
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " : Konsep integrasi dan prompt design"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      4
+     ],
+     "off": 14
+    }
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " : Chat interface dengan AI"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      6
+     ],
+     "off": 14
+    }
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " : Penanganan error dan fallback"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      8
+     ],
+     "off": 14
+    }
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " : Mini project dan refleksi"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      1,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "1 : Lapisan fitur AI"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      1,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Fitur AI diletakkan pada folder fitur sendiri dengan aturan lapisan Minggu 7, yaitu presentation bergantung pada domain dan domain tidak mengenal Flutter maupun paket jaringan. Penyedia AI hanya dikenal oleh lapisan data, sehingga mengganti penyedia tidak menyentuh widget."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lib/features/ai/"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  domain/entities/chat_message.dart        ChatMessage, ChatRole"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  domain/repositories/ai_assistant.dart    AiAssistant.ask()"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  domain/usecases/ask_assistant.dart       kSystemPrompt + aturan masukan"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  data/datasources/ai_key_store.dart       flutter_secure_storage"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  data/repositories/inferhub_assistant.dart  http ke api.inferhub.dev"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  presentation/providers/ai_providers.dart  Provider + NotifierProvider"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  presentation/pages/assistant_page.dart    UI chat"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 1. Lapisan fitur AI dan tanggung jawabnya"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 4,
+    "cols": 3
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Lapisan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Berkas"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Yang dijaga"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "domain"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "chat_message, ai_assistant, ask_assistant"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "tanpa import package:flutter, package:http, atau secure storage"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "data"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ai_key_store, inferhub_assistant"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "bentuk badan permintaan, pemetaan kode status ke Failure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "presentation"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ai_providers, assistant_page"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "hanya membaca state dan menampilkan pesan kegagalan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      1,
+      1,
+      12
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Pemisahan ini diuji dengan grep: tidak ada satu pun berkas domain yang mengimpor paket jaringan atau penyimpanan aman."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      2,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "2 : Prompt sistem dan prompt pengguna"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      2,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Prompt sistem dipatok sebagai konstanta di lapisan domain, bukan di widget, agar persona dan batas privasi tidak dapat diubah diam-diam dari kode tampilan."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "const kSystemPrompt ="
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    'Kamu asisten kampus Politeknik Negeri Malang. Jawab dalam Bahasa Indonesia, '"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    'maksimal 3 kalimat, tanpa membahas data pribadi pengguna. '"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    'Bila pertanyaan di luar topik kampus, tolak dengan sopan.';"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "user prompt (saat perancangan):"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "'Rancang satu fitur chat AI untuk aplikasi Flutter kampus: sebutkan lapisan"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "arsitektur, cara menyimpan API key, dan cara menekan biaya per permintaan.'"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 2. Slot prompt dan batas yang dijaga"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 5,
+    "cols": 3
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Slot"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Isi pada Minggu 10"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Batas yang dijaga"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "System prompt"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "asisten kampus Polinema, Bahasa Indonesia, 3 kalimat"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "persona dan panjang jawaban tidak ditentukan widget"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "User prompt"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pertanyaan pengguna setelah trim, maksimal 500 karakter"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "permintaan kosong atau kepanjangan ditolak lokal, tanpa biaya"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Konteks"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "tidak ada data pengguna yang disertakan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "NIK, nomor telepon, dan token tidak pernah masuk badan permintaan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Batas keluaran"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "max_tokens 400"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "jawaban tidak melebar dan biaya per permintaan terbatas"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      2,
+      1,
+      12
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Keluaran awal AI disimpan apa adanya di docs/output-awal-ai.txt, termasuk waktu dan token, sehingga angka pada laporan ini dapat diperiksa ulang dari berkas tersebut."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "$ cat docs/output-awal-ai.txt"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Arsitektur dapat dibagi menjadi lapisan UI/widget chat, state management,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "repository/service, serta backend API gateway yang meneruskan permintaan ke"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "penyedia AI. API key jangan disimpan di aplikasi Flutter, melainkan di"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "server/secret manager dan diakses melalui backend kampus. Untuk menekan biaya,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "gunakan caching jawaban umum, batasi token dan panjang konteks, terapkan rate"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "limit/kuota, pilih model lebih murah untuk pertanyaan sederhana, serta monitor"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pemakaian per fitur."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "30.11 detik, 126 token prompt, 234 token penyelesaian (117 token penalaran),"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "biaya 0.00001"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "3 : Verifikasi usulan AI"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      3,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Usulan AI diperiksa satu per satu terhadap keadaan proyek, bukan diterima karena terdengar wajar. Hasilnya dua usulan diterima, dua ditolak dengan alasan, dua ditunda."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 3. Verifikasi usulan AI"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 7,
+    "cols": 3
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Usulan AI"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Verifikasi"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Keputusan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Pisahkan lapisan UI, state, repository, gateway"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "cocok dengan aturan Minggu 7 yang sudah dipakai"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "diterima sebagai features/ai/{domain,data,presentation}"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "API key disimpan di server, bukan di aplikasi"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "proyek belum punya backend kampus, lingkup jobsheet adalah klien"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ditolak, key di flutter_secure_storage, risiko dicatat"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Gateway meneruskan permintaan ke penyedia"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "tidak dapat dipenuhi tanpa backend"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ditolak"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Batasi token dan panjang konteks"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "diterapkan max_tokens 400 dan batas 500 karakter"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "diterima"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Rate limit atau kuota"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "diterapkan di klien: 20 permintaan per sesi"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "diterima, batas ini masih dapat diakali pengguna"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Cache jawaban umum dan model lebih murah"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "belum ada kebutuhan dan belum ada pembanding biaya"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ditunda"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      3,
+      1,
+      4
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "table.insertRowBelow"
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      1,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "1 : Dependensi dan penyimpanan kunci"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      1,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Modul menyebut tiga langkah praktikum, yaitu dependensi, layanan AI, dan layar chat. Ketiganya dikerjakan berurutan dan diuji setelah tiap langkah, bukan sekaligus di akhir."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "dependencies:"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  http: ^1.2.0"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  flutter_secure_storage: ^11.2.0"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  flutter_riverpod: ^3.4.3"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Versi flutter_secure_storage pada modul ditulis ^9.0.0, tetapi proyek Minggu 9 sudah memakai ^11.2.0. Versi proyek dipertahankan agar tidak menurunkan versi paket yang sudah lolos analisis."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "class AiKeyStore {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  final FlutterSecureStorage _storage;"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  static const _key = 'ai_api_key';"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  Future<String?> read() => _storage.read(key: _key);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  Future<void> save(String value) =>"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "      _storage.write(key: _key, value: value.trim());"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  /// Hanya sepuluh karakter pertama yang tampil, sisanya bintang."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  static String mask(String? key) {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    if (key == null || key.isEmpty) return '(belum diatur)';"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    final head = key.length <= 10 ? key.substring(0, 4) : key.substring(0, 10);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    return '$head${'*' * 6}';"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  }"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "}"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 4. Berkas hasil langkah 1 sampai 3"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 4,
+    "cols": 3
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Berkas"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Isi"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Bukti"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ai_key_store.dart"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "baca, simpan, hapus kunci; mask untuk UI"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "status kunci di layar tampil sk-airo-bR******"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "inferhub_assistant.dart"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "POST /v1/chat/completions, model combo/uu"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "tujuh test data layer hijau"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "assistant_page.dart"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "daftar gelembung, input, penghitung, retry"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "empat widget test hijau"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      1,
+      1,
+      24
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      2,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "2 : Layanan Inferhub dan pemetaan kegagalan"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      2,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Layanan AI menerima prompt sistem dan pertanyaan, membaca kunci pada setiap panggilan, lalu memetakan setiap kegagalan ke tipe Failure. Lapisan tampilan tidak pernah melihat kode status HTTP."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "final response = await _client.post("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  Uri.parse(endpoint),"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  headers: {'Authorization': 'Bearer $key', 'Content-Type': 'application/json'},"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  body: jsonEncode({"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    'model': model,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    'messages': ["
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "      {'role': 'system', 'content': systemPrompt},"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "      {'role': 'user', 'content': question},"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    ],"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    'max_tokens': 400,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  }),"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": ").timeout(timeout);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 5. Pemetaan kegagalan ke Failure"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 8,
+    "cols": 3
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Kejadian"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Failure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Pesan yang tampil"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "kunci belum diatur"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "AuthFailure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "API key AI belum diatur. Buka menu kunci."
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "HTTP 401 atau 403"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "AuthFailure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "API key ditolak penyedia layanan AI."
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "HTTP selain 200"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "NetworkFailure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Layanan AI membalas 502. Coba lagi nanti."
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lebih dari 60 detik"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "NetworkFailure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Layanan AI terlalu lama menjawab."
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "SocketException"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "NetworkFailure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tidak ada koneksi internet."
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "badan bukan JSON"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "LocalFailure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Balasan layanan AI tidak dapat dibaca."
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "konten kosong"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "LocalFailure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Model tidak mengembalikan teks."
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      2,
+      1,
+      16
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Batas waktu dipatok 60 detik setelah pengukuran nyata: permintaan ke model combo/uu memakan 30,11 detik, sehingga batas 30 detik pada versi pertama membuat panggilan gagal padahal layanan sehat."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "3 : Halaman chat dan state"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      3,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "State percakapan dipegang satu notifier autoDispose. Penghitung permintaan ikut di state, sehingga pagar biaya kembali nol saat halaman ditutup."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "class ChatNotifier extends AutoDisposeNotifier<ChatState> {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  Future<void> send(String question) async {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    final text = question.trim();"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    if (text.isEmpty || state.sending) return;"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    if (state.exhausted) { /* LocalFailure batas 20 permintaan */ }"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    state = state.copyWith(messages: [...state.messages,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "        ChatMessage(role: ChatRole.user, text: text)],"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "        sending: true, clearFailure: true, requests: state.requests + 1);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    final result = await ref.read(askAssistantProvider).call(text);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    ..."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  }"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  Future<void> retry() => send(_lastQuestion);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "}"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "insert.picture",
+   "params": {
+    "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\10-week-10-ai-feature-integration\\screenshots\\10-01-asisten-kosong.png",
+    "width": 157.0926724137931
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Caption"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Gambar 1. Halaman asisten sebelum ada pertanyaan, kunci tampil tersamar"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 6. Kunci widget untuk pengujian"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 7,
+    "cols": 3
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Kunci"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Widget"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Dipakai test"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ai-key-button"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "tombol atur kunci"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "membuka dialog kunci"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ai-key-status"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "teks status kunci"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "menampilkan kunci tersamar"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "chat-input, chat-send"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "field dan tombol kirim"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "mengirim pertanyaan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "chat-message-n"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "gelembung percakapan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "memeriksa urutan pesan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "chat-failure, chat-retry"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "bilah gagal dan tombol coba lagi"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "fallback saat API gagal"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ai-usage"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "penghitung permintaan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "menampilkan 1/20"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      3,
+      1,
+      19
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      4,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "4 : Empat belas test fitur baru"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      4,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Empat belas test baru ditulis untuk fitur ini: tujuh di lapisan data, tiga di use case, dan empat widget test. Seluruh suite berjumlah 37 test."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 7. Test fitur AI"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 11,
+    "cols": 3
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Test"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Harapan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Hasil"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "balasan 200 dikembalikan sebagai teks"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "teks dipakai apa adanya"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lulus"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "tanpa key tidak ada request keluar"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "AuthFailure tanpa panggilan HTTP"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lulus"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "401 menjadi AuthFailure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "tipe kegagalan tepat, bukan Exception"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lulus"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "502 menjadi NetworkFailure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "kode status muncul di pesan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lulus"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "konten kosong menjadi LocalFailure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "tidak ada gelembung hampa"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lulus"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "badan bukan JSON menjadi LocalFailure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "FormatException ditangkap"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lulus"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "SocketException menjadi NetworkFailure"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "mode offline terdeteksi"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lulus"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pertanyaan kosong dan 500+ karakter ditolak"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "tanpa biaya permintaan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lulus"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "kirim pertanyaan menampilkan jawaban"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "dua gelembung berurutan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lulus"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "kegagalan menampilkan mode offline dan coba lagi"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "bilah fallback tampil"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lulus"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      4,
+      1,
+      4
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      1,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "1 : Risiko dan mitigasi"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      1,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel risiko modul diisi dengan mitigasi yang benar-benar ada di kode, bukan rencana. Setiap baris menunjuk berkas yang dapat diperiksa."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 8. Risiko dan mitigasi yang diterapkan"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 6,
+    "cols": 3
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Risiko"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Mitigasi di proyek"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Letak"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Bocor data pengguna"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "tidak ada kolom data pribadi yang dikirim; batasnya ditulis di prompt sistem dan pada teks halaman"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ask_assistant.dart, assistant_page.dart"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Biaya melonjak"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "maksimal 20 permintaan per sesi, max_tokens 400, permintaan kosong ditolak sebelum keluar"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ai_providers.dart, inferhub_assistant.dart"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "API error atau down"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "setiap kode status dan pengecualian dipetakan ke Failure bertipe, pengguna diberi tombol coba lagi"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "inferhub_assistant.dart, assistant_page.dart"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Respons tidak relevan"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "jawaban kosong dianggap gagal, bukan ditampilkan; pengumuman tetap dibuka dari cache lokal"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "inferhub_assistant.dart"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Kunci API tersalin ke layar"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "hanya sepuluh karakter pertama yang tampil, sisanya bintang"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ai_key_store.dart"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      1,
+      1,
+      4
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      2,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "2 : Fallback di perangkat"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      2,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Fallback diuji di perangkat: WiFi dan data dimatikan, lalu satu pertanyaan dikirim. Bilah kegagalan muncul dengan pesan yang menyebut mode offline, sementara daftar pengumuman tetap dapat dibuka."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "insert.picture",
+   "params": {
+    "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\10-week-10-ai-feature-integration\\screenshots\\10-03-asisten-offline-fallback.png",
+    "width": 157.0926724137931
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Caption"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Gambar 2. Fallback saat koneksi dimatikan, jawaban lama tetap terbaca"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "$ adb shell svc wifi disable && adb shell svc data disable"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "$ adb shell input text \"Apakah perpustakaan buka hari Sabtu?\" && input keyevent 66"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  -> SocketException -> NetworkFailure('Tidak ada koneksi internet.')"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  -> bilah: \"Mode offline: pengumuman tetap dapat dibuka.\" + tombol Coba lagi"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Percobaan pertama modul ini justru gagal karena batas waktu 30 detik, bukan karena koneksi. Karena itu batas waktu dinaikkan ke 60 detik dan percobaan diulang, lalu fallback diuji ulang dengan koneksi dimatikan. Dua kegagalan berbeda tidak boleh memakai pesan yang sama."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "3 : Verifikasi mesin"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      3,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Bukti mesin dijalankan pada kode akhir, bukan pada draf. Hasilnya disimpan di docs/verifikasi-mesin.txt dan dicetak ulang di bawah."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "$ dart format --output=none --set-exit-if-changed lib test"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Formatted 42 files (0 changed) in 0.37 seconds."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "$ flutter analyze"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "No issues found! (ran in 83.6s)"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "$ flutter test"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "00:15 +37: All tests passed!"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "insert.picture",
+   "params": {
+    "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\10-week-10-ai-feature-integration\\screenshots\\10-02-asisten-jawaban.png",
+    "width": 157.0926724137931
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Caption"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Gambar 3. Jawaban nyata dari API Inferhub untuk pertanyaan jam layanan"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Jawaban pada gambar berasal dari panggilan sungguhan ke model combo/uu, bukan data tiruan. Pertanyaan jam layanan mengembalikan tiga kalimat sesuai batas prompt sistem, dan penghitung naik ke 1/20."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      1,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tugas 1 : Fitur yang dipilih"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      1,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Fitur yang diintegrasikan adalah chat asisten kampus karena fitur ini memakai siklus penuh yang diminta modul: prompt sistem, permintaan jaringan, penyimpanan kunci, penanganan kegagalan, dan batas biaya. OCR dan speech-to-text tidak dikerjakan karena tidak ada berkas uji yang dapat diverifikasi tanpa menambah izin kamera dan mikrofon."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 9. Daftar keluaran tugas"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 6,
+    "cols": 3
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Keluaran"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Berkas"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Status"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "prompt sistem, user prompt, output awal"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "docs/ai-log.md, docs/output-awal-ai.txt, docs/permintaan-ai.json"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ada"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "bukti mesin hijau"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "docs/verifikasi-mesin.txt, README.md"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ada"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "tabel risiko privasi dan biaya"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 8 laporan ini, README.md"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ada"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "kode fitur"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lib/features/ai/"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ada"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "screenshot"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "screenshots/10-01, 10-02, 10-03"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ada"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      1,
+      1,
+      4
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      2,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tugas 2 : Bukti perangkat dan OCR"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      2,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Ketiga gambar diambil dari perangkat Infinix 121512545B015596 dengan adb, lalu isinya dibaca ulang memakai OCR agar keterangan gambar tidak hanya bersandar pada nama berkas. Hasil OCR disimpan di docs/screenshots-ocr.txt."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 10. Gambar dan isi yang terbaca OCR"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 4,
+    "cols": 2
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Gambar"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Isi terbaca"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "10-01-asisten-kosong.png"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Asisten AI, Kunci: sk-airo-bR******, 0/20, teks ajakan bertanya"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "10-02-asisten-jawaban.png"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pertanyaan jam layanan, jawaban tiga kalimat, 1/20"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "10-03-asisten-offline-fallback.png"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tidak ada koneksi internet. Mode offline, tombol Coba lagi, 2/20"
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 210.3
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      2,
+      1,
+      4
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Refleksi"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      3,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Subsoal"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Fitur AI mana yang diintegrasikan dan mengapa?"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Chat asisten kampus, karena satu fitur ini menyentuh seluruh rangkaian yang dinilai modul: kontrak domain, pemanggilan jaringan, penyimpanan kunci, kegagalan, dan biaya. Fitur yang lebih kecil, misalnya OCR satu gambar, tidak akan memaksa keputusan arsitektur apa pun."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Subsoal"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Bagaimana privasi pengguna dilindungi?"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tiga lapis: prompt sistem melarang membahas data pribadi, use case menolak pertanyaan kosong dan membatasi 500 karakter sebelum keluar, dan kunci hanya tersimpan di secure storage dengan tampilan tersamar. Yang tidak dikirim tetap dicatat sebagai risiko, karena aplikasi klien tidak dapat menjamin apa pun tentang perangkat pengguna."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Subsoal"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Fallback apa yang disediakan bila layanan AI error?"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Setiap kegagalan menjadi Failure bertipe dengan pesan yang menyebut sebabnya, ditambah tombol Coba lagi yang mengulang pertanyaan terakhir. Fitur lain tidak ikut mati: pengumuman tetap dibuka dari cache lokal, dan hal itu terbukti pada Gambar 2."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Subsoal"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Satu hal yang dipelajari tentang UX fitur AI di mobile?"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Waktu tunggu adalah bagian dari desain, bukan gangguan teknis. Model dengan token penalaran menjawab sekitar 30 detik, sehingga indikator proses harus terlihat sejak detik pertama dan pesan gagal harus menyebut penyebab yang dapat ditindaklanjuti. Pesan yang salah menyalahkan koneksi, padahal penyebabnya batas waktu, lebih buruk daripada tidak ada pesan sama sekali."
+   }
+  },
+  {
+   "command": "review.trackChanges",
+   "params": {
+    "value": true
+   }
+  }
+ ],
+ "save": [
+  "C:\\Kuliah\\Tingkat 3\\PEMMOB\\10-week-10-ai-feature-integration\\Laporan Jobsheet Minggu 10 - Adam Bahy Maulana.docx",
+  "C:\\Kuliah\\Tingkat 3\\PEMMOB\\10-week-10-ai-feature-integration\\Laporan Jobsheet Minggu 10 - Adam Bahy Maulana.pdf"
+ ]
+}
