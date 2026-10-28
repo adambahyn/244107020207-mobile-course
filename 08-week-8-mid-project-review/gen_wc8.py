@@ -125,17 +125,17 @@ def p1_3():
 # ---------------------------------------------------------------- Praktikum 2
 def p2_1():
     put("Tiga Pull Request kecil dibuka dari cabang masing-masing menuju "
-        "develop. Tidak ada PR yang melebihi 300 baris perubahan.")
+        "develop: PR #3, #4, dan #5. Tidak ada PR yang melebihi 300 baris perubahan.")
     tbl("Tabel 3. Daftar Pull Request Minggu 8",
         ["Cabang", "Masalah", "Ukuran"], [
-            ["fix/mask-token-range",
-             "substring(0, 12) melempar RangeError untuk token pendek",
+            ["#3 fix/mask-token-range",
+             "substring(0, 12) melempar RangeError untuk token pendek (issue #1)",
              "2 berkas, +8/-2"],
-            ["fix/announcement-loading-state",
+            ["#4 fix/announcement-loading-state",
              "deep link menampilkan teks belum tersedia saat data masih dimuat",
              "2 berkas, +95/-30"],
-            ["chore/ci-workflow",
-             "tidak ada penjaga otomatis untuk PR kotor",
+            ["#5 chore/ci-workflow",
+             "tidak ada penjaga otomatis untuk PR kotor (issue #2)",
              "1 berkas, +20/-0"],
         ])
     put("Isi PR mengikuti urutan masalah, solusi, cara uji, lalu dampak. Contoh "
@@ -211,15 +211,15 @@ def p2_4():
         "perubahan.")
     tbl("Tabel 5. Status tindak lanjut per PR",
         ["PR", "Komentar", "Tindak lanjut", "Status"], [
-            ["fix/mask-token-range", "3", "test merah ditulis lebih dulu, kode disederhanakan",
+            ["#3 mask-token-range", "3", "test merah ditulis lebih dulu, kode disederhanakan",
              "merged"],
-            ["fix/announcement-loading-state", "3", "state.when, messageOf, tiga widget test",
+            ["#4 announcement-loading", "3", "state.when, messageOf, tiga widget test",
              "merged"],
-            ["chore/ci-workflow", "2", "urutan format-analyze-test, working-directory",
+            ["#5 ci-workflow", "2", "urutan format-analyze-test, working-directory",
              "merged"],
         ])
-    put("Issue ditutup lewat kata kunci Closes pada badan PR, dan cabang "
-        "dihapus setelah merge. Tidak ada PR berstatus request changes yang "
+    put("Issue #1 dan #2 ditutup setelah merge, cabang dihapus, dan tautan PR "
+        "dicatat di README. Tidak ada PR berstatus request changes yang "
         "di-merge.")
 
 

@@ -1111,7 +1111,7 @@
   {
    "command": "text.insert",
    "params": {
-    "text": "Tiga Pull Request kecil dibuka dari cabang masing-masing menuju develop. Tidak ada PR yang melebihi 300 baris perubahan."
+    "text": "Tiga Pull Request kecil dibuka dari cabang masing-masing menuju develop: PR #3, #4, dan #5. Tidak ada PR yang melebihi 300 baris perubahan."
    }
   },
   {
@@ -1193,7 +1193,7 @@
   {
    "command": "text.insert",
    "params": {
-    "text": "fix/mask-token-range"
+    "text": "#3 fix/mask-token-range"
    }
   },
   {
@@ -1208,7 +1208,7 @@
   {
    "command": "text.insert",
    "params": {
-    "text": "substring(0, 12) melempar RangeError untuk token pendek"
+    "text": "substring(0, 12) melempar RangeError untuk token pendek (issue #1)"
    }
   },
   {
@@ -1238,7 +1238,7 @@
   {
    "command": "text.insert",
    "params": {
-    "text": "fix/announcement-loading-state"
+    "text": "#4 fix/announcement-loading-state"
    }
   },
   {
@@ -1283,7 +1283,7 @@
   {
    "command": "text.insert",
    "params": {
-    "text": "chore/ci-workflow"
+    "text": "#5 chore/ci-workflow"
    }
   },
   {
@@ -1298,7 +1298,7 @@
   {
    "command": "text.insert",
    "params": {
-    "text": "tidak ada penjaga otomatis untuk PR kotor"
+    "text": "tidak ada penjaga otomatis untuk PR kotor (issue #2)"
    }
   },
   {
@@ -2402,7 +2402,7 @@
   {
    "command": "text.insert",
    "params": {
-    "text": "fix/mask-token-range"
+    "text": "#3 mask-token-range"
    }
   },
   {
@@ -2462,7 +2462,7 @@
   {
    "command": "text.insert",
    "params": {
-    "text": "fix/announcement-loading-state"
+    "text": "#4 announcement-loading"
    }
   },
   {
@@ -2522,7 +2522,7 @@
   {
    "command": "text.insert",
    "params": {
-    "text": "chore/ci-workflow"
+    "text": "#5 ci-workflow"
    }
   },
   {
@@ -2602,7 +2602,7 @@
   {
    "command": "text.insert",
    "params": {
-    "text": "Issue ditutup lewat kata kunci Closes pada badan PR, dan cabang dihapus setelah merge. Tidak ada PR berstatus request changes yang di-merge."
+    "text": "Issue #1 dan #2 ditutup setelah merge, cabang dihapus, dan tautan PR dicatat di README. Tidak ada PR berstatus request changes yang di-merge."
    }
   },
   {
