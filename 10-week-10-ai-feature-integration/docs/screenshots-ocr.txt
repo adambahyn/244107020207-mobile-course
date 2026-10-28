@@ -1,0 +1,8 @@
+# Isi tiga screenshot Minggu 10, dibaca OCR (Windows.Media.Ocr, engine en-US)
+
+=== 10-01-asisten-kosong.png
+3:44 | As i sten AI | Kunci: (belum diatur) | 210 | KB'S | 4.5G | 21 | 0/20 | Tanyakan jadwal, layanan, atau pengumuman | kampus. Jangan kirim data pribadi seperti NIK | atau nomor telepon. | Tanya seputar kampus
+=== 10-02-asisten-jawaban.png
+3:54 | As i sten AI | Kunci: sk-airo-bR****** | 291 | KB'S | 4.5G | 1/20 | Jam layanan akademik kampus? | Jam layanan akademik Politeknik Negeri | Malang umumnya Senin-Jumat, sekitar | pukul 08.00-16.00 dengan jeda istirahat | siang. Jadwal bisa berbeda pada masa | tertentu, jadi sebaiknya dicek melalui | kanal resmi kampus atau unit akademik | terkait. Silakan hubungi layanan akademik | untuk memastikan jam operasional hari | itu. | Tanya seputar kampus
+=== 10-03-asisten-fallback.png
+3:56 | As i sten AI | Kunci: sk-airo-bR****** | 3/20 | Jam layanan akademik kampus? | Jam layanan akademik Politeknik Negeri | Malang umumnya Senin-Jumat, sekitar | pukul 08.00-16.00 dengan jeda istirahat | siang. Jadwal bisa berbeda pada masa | tertentu, jadi sebaiknya dicek melalui | kanal resmi kampus atau unit akademik | terkait. Silakan hubungi layanan akademik | untuk memastikan jam operasional hari | itu. | Ada pengumuman beasiswa? | Ada pengumuman beasiswa? | Tidak ada koneksi internet. Mode | offline: pengumuman tetap dapat | dibuka. | Tanya seputar kampus | Coba lagi
