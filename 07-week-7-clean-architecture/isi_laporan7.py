@@ -1,17 +1,12 @@
 #!/usr/bin/env python
-"""Bangun Laporan Jobsheet Minggu 7 (Clean Architecture) dari Template Rapi.
+"""Model isi laporan minggu 7: teks jawaban + penggabung gambar bukti.
 
-Angka berasal dari docs/verifikasi-grep.txt, hasil flutter analyze/test, dan
-screenshot device di screenshots/.
+Berkas ini tidak menyentuh .docx sama sekali; gen_wc.py membaca ISI di sini lalu
+membangun dokumen lewat WordCraft (ATURAN-LAPORAN.md paragraf 10).
 """
 import os
 import re
 
-from docx import Document
-from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.oxml import OxmlElement
-from docx.oxml.ns import qn
-from docx.shared import Cm
 from PIL import Image, ImageDraw
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -812,30 +807,5 @@ def isi_tabel(table, langkah, figs):
             fn(row.cells[1])
 
 
-def main():
-    figs = build_figures()
-    doc = Document(TPL)
-
-    for row in doc.tables[0].rows:
-        key = row.cells[0].text.strip()
-        if key in ID_ROWS:
-            clear_cell(row.cells[2])
-            put(row.cells[2], ID_ROWS[key])
-
-    for p in doc.paragraphs:
-        teks = p.text.strip()
-        if teks in JUDUL:
-            for r in p.runs:
-                r.text = ""
-            p.runs[0].text = JUDUL[teks]
-
-    order = ["Praktikum Ke-1", "Praktikum Ke-2", "Praktikum Ke-3", "Soal Praktikum"]
-    for name, table in zip(order, doc.tables[1:]):
-        isi_tabel(table, ISI[name], figs)
-
-    doc.save(OUT)
-    print("simpan:", OUT)
-
-
 if __name__ == "__main__":
-    main()
+    print("model isi saja; dokumen dibangun oleh gen_wc.py lewat WordCraft")

@@ -109,3 +109,20 @@ adb install -r build/app/outputs/flutter-apk/app-release.apk
 Flutter, Riverpod 3 (`Provider`, `AsyncNotifierProvider`, `FutureProvider`),
 GoRouter, Dio dengan interceptor refresh 401, `flutter_secure_storage`,
 Firebase Core + Cloud Messaging, `flutter_local_notifications`.
+
+## 8. Membangun laporan
+
+Isi jawaban ada di `isi_laporan7.py`; `gen_wc.py` mengubahnya menjadi
+`job-laporan7.json` lalu WordCraft yang menyusun `.docx` dan `.pdf`
+(author `Hermes via MCP`, track changes aktif), sesuai `C:/Kuliah/ATURAN-LAPORAN.md`
+paragraf 10.
+
+```bash
+"C:/Program Files/Python313/python.exe" gen_wc.py
+"C:/Users/adamb/wordcraft/app/wordcraft-cli.exe" run --script job-laporan7.json
+"C:/Program Files/Python313/python.exe" C:/Kuliah/cek_laporan.py \
+  "Laporan Jobsheet Minggu 7 - Adam Bahy Maulana.docx"
+```
+
+Screenshot `before-*` berasal dari APK minggu 6, `after-*` dari APK hasil
+refactor; keduanya diambil dari perangkat Infinix 1080x2436 lewat `adb`.

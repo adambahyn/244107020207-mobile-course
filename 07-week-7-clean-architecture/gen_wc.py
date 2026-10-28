@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 """Susun job.json WordCraft untuk laporan minggu 7.
 
-Isi jawaban diambil apa adanya dari build_laporan.py: fungsi put/code/img/tbl
+Isi jawaban diambil apa adanya dari isi_laporan7.py: fungsi put/code/img/tbl
 diganti perekam, jadi tidak ada teks yang diketik ulang di sini.
 """
 import json
 import os
 
-import build_laporan as B
+import isi_laporan7 as B
 
 WEEK = os.path.dirname(os.path.abspath(__file__))
 DOCX = os.path.join(WEEK, "Laporan Jobsheet Minggu 7 - Adam Bahy Maulana.docx")
