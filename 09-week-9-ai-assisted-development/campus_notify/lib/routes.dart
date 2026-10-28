@@ -5,6 +5,7 @@ class Routes {
   static const login = '/login';
   static const home = '/';
   static const announcement = '/pengumuman/:id';
+  static const search = '/cari';
 
   static String announcementById(String id) => '/pengumuman/$id';
 }

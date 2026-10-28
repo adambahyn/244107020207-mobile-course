@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'features/announcements/presentation/pages/announcement_page.dart';
+import 'features/announcements/presentation/pages/announcement_search_page.dart';
 import 'features/announcements/presentation/pages/home_page.dart';
 import 'features/auth/presentation/pages/login_page.dart';
 import 'routes.dart';
@@ -25,6 +26,10 @@ GoRouter buildRouter({
     routes: [
       GoRoute(path: Routes.login, builder: (_, _) => const LoginPage()),
       GoRoute(path: Routes.home, builder: (_, _) => const HomePage()),
+      GoRoute(
+        path: Routes.search,
+        builder: (_, _) => const AnnouncementSearchPage(),
+      ),
       GoRoute(
         path: Routes.announcement,
         builder: (_, state) =>

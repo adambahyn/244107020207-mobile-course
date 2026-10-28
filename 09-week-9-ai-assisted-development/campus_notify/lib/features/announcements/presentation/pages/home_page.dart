@@ -74,6 +74,12 @@ class _HomePageState extends ConsumerState<HomePage> {
         title: const Text('Campus Notify'),
         actions: [
           IconButton(
+            key: const Key('search-button'),
+            tooltip: 'Cari pengumuman',
+            icon: const Icon(Icons.search),
+            onPressed: () => context.push(Routes.search),
+          ),
+          IconButton(
             key: const Key('logout-button'),
             tooltip: 'Keluar',
             icon: const Icon(Icons.logout),
