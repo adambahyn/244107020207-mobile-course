@@ -1,0 +1,14 @@
+# Bukti pemeriksaan mesin — 2026-10-28 09:27
+
+## grep 1: domain tidak boleh tahu Flutter
+```
+(kosong = lulus)
+```
+## grep 2: domain tidak boleh tahu Dio/SQLite/Firebase
+```
+(kosong = lulus)
+```
+## grep 3: presentation tidak boleh impor folder data/
+```
+(kosong = lulus)
+```
