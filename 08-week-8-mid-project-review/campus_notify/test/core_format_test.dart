@@ -21,6 +21,11 @@ void main() {
       expect(maskToken(full), 'mock-access-…');
       expect(maskToken(full).length, lessThan(full.length));
     });
+
+    test('token pendek tidak melempar RangeError', () {
+      expect(maskToken('abc'), 'abc…');
+      expect(maskToken('123456789012'), '123456789012…');
+    });
   });
 
   group('routeFromMessage', () {
