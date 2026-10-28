@@ -522,6 +522,14 @@ def p3_4(cell, figs):
         "pengumuman, simulasi 401, dan logout. Setiap alur direkam dua kali: APK "
         "Minggu 6 sebagai gambar kiri dan APK hasil refactor sebagai gambar kanan.",
     )
+    put(
+        cell,
+        "Kedua tangkapan berukuran sama, 1080 x 2436 piksel, dan selisih piksel "
+        "pada setiap alur di bawah satu persen: 0,21 % login, 0,34 % beranda, "
+        "0,92 % detail, 0,34 % simulasi 401, dan 0,22 % logout. Selisih itu "
+        "berasal dari jam pada status bar dan cap waktu kartu, bukan dari "
+        "susunan widget.",
+    )
     for path, caption in [
         (
             figs[0],

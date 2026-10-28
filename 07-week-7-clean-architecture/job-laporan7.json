@@ -1,0 +1,5228 @@
+{
+ "file": "C:/Kuliah/Tingkat 3/PEMMOB/07-week-7-clean-architecture/Laporan Jobsheet Minggu 7 - Adam Bahy Maulana.docx",
+ "commands": [
+  {
+   "command": "file.setAuthor",
+   "params": {
+    "name": "Hermes via MCP"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      0,
+      0,
+      2,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "PEMOB"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      0,
+      6,
+      2,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "7"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      2
+     ],
+     "off": 14
+    }
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " : Audit Layer Project Lama"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      4
+     ],
+     "off": 14
+    }
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " : Domain dan Data per Fitur"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      6
+     ],
+     "off": 14
+    }
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " : Presentation, Dependency Injection, dan Verifikasi"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      8
+     ],
+     "off": 14
+    }
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " : Refactor Menyeluruh, AI Challenge, dan Refleksi"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      1,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "1 : Petakan berkas ke layer"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      1,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Project yang diaudit adalah campus_notify milik Minggu 6 (autentikasi, penyimpanan token, dan FCM). Susunan awalnya memakai empat folder mendatar, yaitu data, providers, pages, dan messaging, ditambah router serta routes di akar lib."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 1. Pemetaan berkas lama ke layer"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 7,
+    "cols": 3
+   }
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Berkas"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Layer saat ini"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Masalah"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pages/home_page.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "presentation"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "mengimpor data/token_store.dart dan memakai TokenStore.mask langsung"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pages/login_page.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "presentation"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "mengimpor data/api_errors.dart untuk menerjemahkan galat"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "providers/auth_provider.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "presentation (state)"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "membuat AuthRepository() di dalam provider; kontrak dan implementasi belum dipisah"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "data/auth_repository.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "data"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "entity Session, kontrak, dan implementasi menumpuk dalam satu berkas"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "data/token_store.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "data"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "aman, tetapi dibaca langsung oleh halaman"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "messaging/deeplink.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "infrastruktur"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "fungsi murni tersimpan di folder messaging sehingga helper murni tersebar"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      2,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "2 : Tandai tiga pelanggaran klasik"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      2,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tiga pencarian dijalankan pada project Minggu 6. Dua pencarian pertama tidak menghasilkan apa pun karena Minggu 6 sudah menyembunyikan Dio di balik provider, sehingga widget tidak memanggil jaringan secara literal."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "$ rg -n \"Dio\\(|http\\.|openDatabase|SharedPreferences\\.getInstance|FlutterSecureStorage\" lib/pages lib/providers"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "(nol hasil)"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "$ rg -n \"DateFormat|jsonDecode|\\.toIso8601String\" lib/pages lib/providers"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "(nol hasil)"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "$ rg -n \"Repository\\(|Dio\\(BaseOptions\" lib/pages lib/providers"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lib/providers\\auth_provider.dart:10:  (ref) => AuthRepository(),"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "$ rg -n \"import '\\.\\./data\" lib/pages"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lib/pages\\login_page.dart:4:import '../data/api_errors.dart';"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lib/pages\\home_page.dart:5:import '../data/token_store.dart';"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Item refactor yang dihasilkan berjumlah tiga: instansiasi repository di luar batas layer, dua impor modul data oleh halaman, dan tidak adanya kontrak domain untuk sesi maupun pengumuman. Kondisi ini menyimpang dari dugaan modul yang menyebut widget memanggil Dio langsung; kebocoran yang sebenarnya terjadi adalah impor modul data oleh halaman, bukan pemanggilan objek Dio."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "3 : Gambar struktur target"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      3,
+      3,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lib/"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "+-- core/failures.dart            Failure murni Dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "+-- core/format.dart              tanggal, token, rute, pesan"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "+-- features/auth/"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|   +-- domain/        entities/session.dart,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|   |                  repositories/auth_repository.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|   +-- data/          datasources/{token_store,api_client,api_errors}.dart,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|   |                  repositories/auth_repository_impl.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|   +-- presentation/  providers/auth_providers.dart,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|                      pages/login_page.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "+-- features/announcements/"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|   +-- domain/        entities/announcement.dart,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|   |                  repositories/announcement_repository.dart,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|   |                  usecases/get_announcements.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|   +-- data/          models/announcement_model.dart,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|   |                  datasources/announcement_local_source.dart,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|   |                  repositories/announcement_repository_impl.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|   +-- presentation/  providers/announcement_providers.dart,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "|                      pages/{home_page,announcement_page}.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "+-- messaging/push_service.dart   infrastruktur FCM"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "+-- router.dart, routes.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Snapshot sebelum refactor disimpan sebagai commit 492c6d1 dengan pesan chore: snapshot sebelum refactor Clean Architecture (week 7), sehingga struktur lama tetap dapat dibandingkan dan di-rollback."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "table.insertRowBelow"
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      1,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "1 : Entity murni di domain"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      1,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Dua entity dibuat tanpa impor Flutter dan tanpa fungsi pemetaan: Session untuk kredensial sesi dan Announcement untuk data pengumuman."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "// lib/features/announcements/domain/entities/announcement.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "class Announcement {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  const Announcement({"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    required this.id,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    required this.title,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    required this.summary,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    required this.body,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    required this.updatedAt,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  });"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  final String id;"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  final String title;"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  final String summary;"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  final String body;"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  final DateTime updatedAt;"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "}"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      2,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "2 : Failure dan kontrak repository"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      2,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Failure ditempatkan di lib/core karena dipakai semua fitur, sedangkan kontrak repository ditempatkan di domain masing-masing fitur. Status sukses dan gagal dikembalikan sebagai record Dart sehingga tidak ada exception yang bocor ke presentation."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "// lib/core/failures.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "sealed class Failure {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  const Failure(this.message);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  final String message;"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "}"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "class LocalFailure extends Failure { const LocalFailure(super.message); }"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "class NetworkFailure extends Failure {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  const NetworkFailure(super.message);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "}"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "class AuthFailure extends Failure { const AuthFailure(super.message); }"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "// lib/features/announcements/domain/repositories/announcement_repository.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "abstract class AnnouncementRepository {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  Future<({List<Announcement> items, Failure? failure})>"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "      fetchAnnouncements();"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "}"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "// lib/features/auth/domain/repositories/auth_repository.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "abstract class AuthRepository {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  Future<bool> hasSession();"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  Future<String?> accessToken();"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  Future<({Session? session, Failure? failure})> login({"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    required String email, required String password});"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  Future<({String? access, Failure? failure})> refresh("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "      String refreshToken);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  Future<void> logout();"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "}"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "3 : Model dan implementasi di data"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      3,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Pemetaan bentuk luar hanya ada di model. Implementasi repository membaca sumber data contoh berbentuk JSON; komponen itulah yang kelak ditukar dengan Dio atau SQLite tanpa menyentuh domain maupun presentation."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "// lib/features/announcements/data/models/announcement_model.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "factory AnnouncementModel.fromJson(Map<String, Object?> json) {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  return AnnouncementModel("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    id: json['id']! as String,"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    updatedAt: DateTime.tryParse(json['updated_at'] as String? ?? '')"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "        ?? DateTime.fromMillisecondsSinceEpoch(0), ...);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "}"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "// lib/features/announcements/data/repositories/announcement_repository_impl.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "try {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  final rows = await source.readAll();"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  final items = rows"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "      .map((row) => AnnouncementModel.fromJson(row).toEntity())"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "      .toList();"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  return (items: items, failure: null);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "} on Object catch (e) {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  return (items: const <Announcement>[],"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "          failure: LocalFailure('Gagal memuat pengumuman: $e'));"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "}"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Sesi autentikasi mengikuti pola yang sama. AuthRepositoryImpl menjadi satu-satunya pemegang TokenStore, dan halaman tidak lagi membaca token mentah karena kontrak domain menyediakan metode accessToken()."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      4,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "4 : Use case satu operasi bisnis"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      5,
+      4,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "// lib/features/announcements/domain/usecases/get_announcements.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "class GetAnnouncements {"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  const GetAnnouncements(this._repository);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  final AnnouncementRepository _repository;"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  Future<({List<Announcement> items, Failure? failure})> call() =>"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "      _repository.fetchAnnouncements();"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "}"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Satu use case dipakai untuk daftar pengumuman karena operasi inilah yang berpotensi bertambah aturan, misalnya urutan, penyaringan, dan cache. Login, logout, serta perpanjangan token tidak diberi use case karena hanya meneruskan panggilan; alasannya ditulis pada docs/ai-challenge.md."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "table.insertRowBelow"
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      1,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "1 : Dependency injection dengan Riverpod"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      1,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Berkas provider menjadi satu-satunya tempat penyambungan lapisan. Widget hanya melihat provider dan tidak membuat repository sendiri."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "// lib/features/auth/presentation/providers/auth_providers.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "final tokenStoreProvider = Provider<TokenStore>((ref) => TokenStore());"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "final authRepositoryProvider = Provider<AuthRepository>("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  (ref) => AuthRepositoryImpl(ref.watch(tokenStoreProvider)),"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": ");"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "final apiClientProvider = Provider((ref) => buildApiClient("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  ref.watch(tokenStoreProvider),"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  ref.watch(authRepositoryProvider)));"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "final authStateProvider = AsyncNotifierProvider<AuthNotifier, bool>("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  AuthNotifier.new);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "// lib/features/announcements/presentation/providers/announcement_providers.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "final announcementRepositoryProvider = Provider<AnnouncementRepository>("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  (ref) => const AnnouncementRepositoryImpl("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "      source: AnnouncementLocalSource()));"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "final getAnnouncementsProvider = Provider<GetAnnouncements>("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  (ref) => GetAnnouncements(ref.watch(announcementRepositoryProvider)));"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "final announcementsProvider = FutureProvider<List<Announcement>>("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  (ref) async { ... });"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      2,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "2 : Halaman hanya membaca state"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      2,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "// lib/features/announcements/presentation/pages/home_page.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "final announcements = ref.watch(announcementsProvider);"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "...announcements.when("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  loading: () => const [Center(child: CircularProgressIndicator())],"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  error: (e, _) => [Text(messageOf(e))],"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  data: (items) => [for (final item in items) _announcementCard(item)],"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "),"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Kartu pengumuman tidak lagi diketik di dalam widget. Daftar dibaca dari provider, lalu halaman detail mengambil satu entri berdasarkan id dari state yang sama. Seluruh teks antarmuka dipertahankan sehingga perbandingan sebelum dan sesudah hanya menyangkut isi state."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "3 : Verifikasi dependency rule"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      3,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tiga pemeriksaan dijalankan pada project hasil refactor dan keluaran lengkapnya disimpan di docs/verifikasi-grep.txt."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 2. Hasil pemeriksaan sterilitas"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 5,
+    "cols": 3
+   }
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Pemeriksaan"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Sasaran"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Hasil"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pola Dio, openDatabase, FlutterSecureStorage, SharedPreferences, jsonDecode"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lib/features/*/presentation"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "nol hasil"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "impor package:flutter, dio, sqflite, firebase"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lib/features/*/domain dan lib/core"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "nol hasil"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pola RepositoryImpl( dan Dio(BaseOptions"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "lib/features/*/presentation/pages"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "nol hasil"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pola yang sama di seluruh presentation"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "hanya berkas providers"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "dua hasil, keduanya titik wiring DI"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "$ flutter analyze"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "No issues found! (ran in 18.7s)"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": " "
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "$ flutter test"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "00:00 +8: test/core_format_test.dart: messageOf memakai pesan Failure"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "00:00 +9: test/get_announcements_test.dart: GetAnnouncements meneruskan daftar dari repository"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "00:00 +10: test/get_announcements_test.dart: GetAnnouncements meneruskan failure tanpa melempar"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "00:00 +10: All tests passed!"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Sepuluh test lulus, termasuk dua test use case dengan repository palsu yang tidak menyentuh basis data maupun jaringan. Build rilis menghasilkan app-release.apk berukuran 53.087.187 byte dan dipasang pada perangkat Infinix resolusi 1080x2436."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      4,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "4 : Perbandingan tampilan"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      7,
+      4,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Uji manual dilakukan pada lima alur, yaitu login, beranda, detail pengumuman, simulasi 401, dan logout. Setiap alur direkam dua kali: APK Minggu 6 sebagai gambar kiri dan APK hasil refactor sebagai gambar kanan."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Kedua tangkapan berukuran sama, 1080 x 2436 piksel, dan selisih piksel pada setiap alur di bawah satu persen: 0.21 % login, 0.34 % beranda, 0.92 % detail, 0.34 % simulasi 401, dan 0.22 % logout. Selisih itu berasal dari jam pada status bar dan cap waktu kartu, bukan dari susunan widget."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.picture",
+   "params": {
+    "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\07-week-7-clean-architecture\\screenshots\\fig\\figura-01-login.png",
+    "width": 413.9
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Caption"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Gambar 1. Halaman login sebelum dan sesudah refactor; susunan widget, teks isian, dan tombol tidak berubah."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.picture",
+   "params": {
+    "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\07-week-7-clean-architecture\\screenshots\\fig\\figura-02-home.png",
+    "width": 413.9
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Caption"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Gambar 2. Beranda dengan kartu pengumuman yang kini dibaca dari announcementsProvider; kolom status perangkat tetap menampilkan token terpotong."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.picture",
+   "params": {
+    "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\07-week-7-clean-architecture\\screenshots\\fig\\figura-03-detail.png",
+    "width": 413.9
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Caption"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Gambar 3. Halaman detail pengumuman dengan baris tanggal hasil formatTanggal pada core/format.dart."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.picture",
+   "params": {
+    "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\07-week-7-clean-architecture\\screenshots\\fig\\figura-04-401.png",
+    "width": 413.9
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Caption"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Gambar 4. Simulasi 401: interceptor menolak perulangan request dan membersihkan sesi ketika refresh ikut gagal."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.picture",
+   "params": {
+    "path": "C:\\Kuliah\\Tingkat 3\\PEMMOB\\07-week-7-clean-architecture\\screenshots\\fig\\figura-05-logout.png",
+    "width": 413.9
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Caption"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Gambar 5. Logout mengembalikan aplikasi ke halaman login melalui redirect GoRouter."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "table.insertRowBelow"
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "table.insertRowBelow"
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "table.insertRowBelow"
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      1,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "1 : Refactor fitur kedua, auth"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      1,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Fitur auth dipisah menjadi entity Session, kontrak AuthRepository, AuthRepositoryImpl, dan satu berkas provider. Notifikasi FCM dibiarkan menjadi infrastruktur pada lib/messaging karena isinya hanya pemanggilan SDK Firebase tanpa aturan bisnis."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 3. Tujuan baru tiap berkas lama"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 9,
+    "cols": 3
+   }
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Berkas lama"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Perlakuan"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Berkas baru"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "data/token_store.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pindah"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "features/auth/data/datasources/token_store.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "data/api_client.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pindah"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "features/auth/data/datasources/api_client.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "data/api_errors.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pecah"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "api_errors.dart untuk peta DioException ke Failure, dan core/format.dart untuk messageOf"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "data/auth_repository.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pecah"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "auth/domain/entities/session.dart, auth/domain/repositories/auth_repository.dart, auth/data/repositories/auth_repository_impl.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "providers/auth_provider.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pindah"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "auth/presentation/providers/auth_providers.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pages/login_page.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pindah"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "auth/presentation/pages/login_page.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pages/home_page.dart dan pages/announcement_page.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "pindah, isi diganti state"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "announcements/presentation/pages/"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "messaging/deeplink.dart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "hapus dan lebur"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "core/format.dart pada fungsi routeFromMessage"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      2,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "2 : Fungsi murni di core/format.dart"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      2,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Empat fungsi murni dipusatkan di lib/core/format.dart agar dapat diuji tanpa widget."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "String formatTanggal(DateTime waktu) =>"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    '${waktu.day} ${_bulan[waktu.month - 1]} ${waktu.year}';"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "String maskToken(String? token) { /* 12 karakter pertama */ }"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "String routeFromMessage(Map<String, dynamic> data) { /* tambah '/' */ }"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "String messageOf(Object error) =>"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "    error is Failure ? error.message : /* potong prefix teknis */;"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Fungsi tersebut diuji pada test/core_format_test.dart yang berisi delapan test, antara lain formatTanggal(DateTime(2026, 9, 27)) menghasilkan 27 September 2026 dan maskToken pada token 37 karakter menghasilkan mock-access- dengan elipsis."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      3,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "3 : Failure sebelum mencapai UI"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      3,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "DioException diubah menjadi NetworkFailure atau AuthFailure pada features/auth/data/datasources/api_errors.dart, sedangkan kegagalan penyimpanan token diubah menjadi LocalFailure di dalam implementasi repository. Halaman hanya menerima teks melalui messageOf sehingga tipe Dio tidak pernah muncul di presentation."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "// features/auth/data/datasources/api_errors.dart"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "case DioExceptionType.badResponse:"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  final code = error.response?.statusCode;"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  if (code == 401) return const AuthFailure("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "      'Sesi berakhir. Silakan login ulang.');"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "  if (code != null && code >= 500) return const NetworkFailure("
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Kode"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "      'Server sedang bermasalah.');"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      4,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "4 : AI Challenge"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      4,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Prompt, usulan awal, dan keputusan final AI Challenge dicatat pada docs/ai-challenge.md. Butir yang diubah atau ditolak dirangkum pada Tabel 4."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Tabel Judul"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Tabel 4. Usulan AI dan keputusan final"
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "insert.table",
+   "params": {
+    "rows": 7,
+    "cols": 3
+   }
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Usulan AI"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Keputusan"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan SelHeader"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Alasan teknis"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "use case untuk login, logout, refresh, tambah, dan hapus"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ditolak"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "operasi satu baris; tiga lapisan tambahan tidak menambah nilai uji"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Either<Failure, T> dengan package fpdart"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ditolak"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "record Dart sudah memberi status sukses dan gagal eksplisit tanpa dependensi baru"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "get_it dan injectable untuk DI"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ditolak"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Riverpod sudah dipakai state aplikasi; dua wadah DI membuat siklus hidup objek tidak jelas"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "satu AppRepository gabungan"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ditolak"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "melanggar Interface Segregation karena pengumuman ikut bergantung pada token auth"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "push service dibungkus domain dan use case"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "ditolak"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "tidak memuat aturan bisnis; parsing rute murni dipindah ke core/format.dart agar teruji"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "interface di domain dan implementasi di data"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "diterima"
+   }
+  },
+  {
+   "command": "text.tab"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "domain tetap murni Dart sehingga use case diuji tanpa perangkat"
+   }
+  },
+  {
+   "command": "table.selectTable"
+  },
+  {
+   "command": "table.autofit",
+   "params": {
+    "mode": "fixed"
+   }
+  },
+  {
+   "command": "table.columnWidth",
+   "params": {
+    "width": 140.20000000000002
+   }
+  },
+  {
+   "command": "table.borders",
+   "params": {
+    "kind": "all",
+    "width": 0.5,
+    "color": "808080"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      5,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "5 : Dependency rule terbukti"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      5,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Jumlah berkas lapisan lib berubah dari 14 menjadi 22. Kenaikan delapan berkas berasal dari lapisan domain (lima berkas) dan core (dua berkas) yang sebelumnya tidak ada, ditambah satu pemisah sumber data. Tidak ada fitur baru yang dibuat selama refactor."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Arah dependensi terverifikasi: presentation mengimpor domain dan provider, data mengimpor domain, sedangkan domain hanya mengimpor domain dan core. Dua baris pertama Tabel 2 menjadi bukti tidak ada panah yang membalik, dan baris keempat memastikan pembuatan objek hanya terjadi di titik wiring."
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      6,
+      0,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Sel"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "6 : Refleksi"
+   }
+  },
+  {
+   "command": "caret.set",
+   "params": {
+    "pos": {
+     "story": "body",
+     "path": [
+      9,
+      6,
+      1,
+      0
+     ],
+     "off": 0
+    }
+   }
+  },
+  {
+   "command": "select.paragraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Mengapa interface repository harus tinggal di domain, bukan di data? Domain menetapkan kebutuhan dan data memenuhinya. Bila kontrak ditaruh di data, use case harus mengimpor modul yang membawa Dio atau secure storage, sehingga unit test domain ikut memerlukan perangkat dan jaringan."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Kapan use case benar-benar dibutuhkan? Ketika satu operasi menggabungkan lebih dari satu sumber data atau memuat aturan bisnis berupa validasi, urutan, dan sinkronisasi. Untuk CRUD satu baris, repository langsung ke notifier sudah cukup dan lebih murah."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Apa biaya over-engineering bagi tim kecil? Setiap lapisan tambahan menambah berkas yang harus dibuka saat membaca satu alur, memperbesar potensi konflik perubahan, dan memperlambat suntingan kecil. Biayanya sepadan ketika jumlah fitur bertambah hingga aturan bisnis tersebar, misalnya saat pengumuman memerlukan sinkronisasi luring."
+   }
+  },
+  {
+   "command": "text.newParagraph"
+  },
+  {
+   "command": "para.style",
+   "params": {
+    "style": "Laporan Isi"
+   }
+  },
+  {
+   "command": "text.insert",
+   "params": {
+    "text": "Bagian mana dari usulan AI yang ditolak? Lima butir pada Tabel 4, yaitu use case untuk setiap operasi tunggal, fpdart, get_it, AppRepository gabungan, dan pembungkusan push service. Penyederhanaan itu menjaga project dua fitur tetap terbaca."
+   }
+  },
+  {
+   "command": "review.trackChanges",
+   "params": {
+    "value": true
+   }
+  }
+ ],
+ "save": [
+  "C:\\Kuliah\\Tingkat 3\\PEMMOB\\07-week-7-clean-architecture\\Laporan Jobsheet Minggu 7 - Adam Bahy Maulana.docx",
+  "C:\\Kuliah\\Tingkat 3\\PEMMOB\\07-week-7-clean-architecture\\Laporan Jobsheet Minggu 7 - Adam Bahy Maulana.pdf"
+ ]
+}

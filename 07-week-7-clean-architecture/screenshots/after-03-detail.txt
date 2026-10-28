@@ -1,0 +1,6 @@
+ Back
+ Pengumuman #3
+ route: /pengumuman/3
+ Kelas Mobile pindah ke Ruang A2, jam 13.00. Harap hadir tepat waktu dan membawa laptop.
+ Diperbarui 12 Oktober 2026
+ Halaman ini dibuka dari deep link notifikasi FCM.

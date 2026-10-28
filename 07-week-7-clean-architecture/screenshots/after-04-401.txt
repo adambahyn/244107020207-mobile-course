@@ -1,0 +1,11 @@
+ Campus Notify
+ Keluar
+ Politeknik Negeri Malang&#10;2 pengumuman terbaru
+ Beasiswa Semester Ganjil&#10;Batas pendaftaran 20 Oktober
+ Status perangkat
+ Access token&#10;mock-access-…
+ Token FCM&#10;f_a-oLZMQw-E…
+ FCM&#10;Izin diberikan. Terdaftar topik pengumuman-kampus.
+ Refresh 401&#10;refresh gagal, token masih ada: DioException
+ Simulasikan 401 + refresh
+ Token selalu ditampilkan terpotong. Tidak pernah ditulis ke log maupun disimpan di SharedPreferences.
