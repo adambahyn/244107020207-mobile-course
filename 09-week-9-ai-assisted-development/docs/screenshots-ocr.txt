@@ -1,0 +1,9 @@
+# Isi tiga screenshot Minggu 9, dibaca OCR (Windows.Media.Ocr, engine en-US)
+# Verifikasi: query kosong -> 2 pengumuman, 'beasiswa' -> 1, 'zzz' -> empty state.
+
+=== 09-01-cari-kosong.png
+11:52 Dv | Cari pengumunnan | Q Pari judul pengumuman | Politeknik Negeri Malang | 2 pengumuman terbaru | Beasiswa Semester Ganjil | Batas pendaftaran 20 Oktober | 11.9 4 G | KB/S
+=== 09-02-cari-cocok.png
+11:54 Dv | KB/S | Cari pengumunnan | Q beasiswa | Beasiswa Semester Ganjil | Batas pendaftaran 20 Oktober | beasiswa beasis...anya beasi...aku | tyuio | qwer | 49 e, | p | a | ?123 | s d fg | h jk I
+=== 09-03-cari-tidak-cocok.png
+11:54 Dv | Cari pengumuman | zzz | 1.35 | KB/S | Tidak ada hasil untuk "zzz | zzz | Zzz | tyuio | qwer | 49 e, | p | a | O | ?123 | s | z | x | g | v | b
