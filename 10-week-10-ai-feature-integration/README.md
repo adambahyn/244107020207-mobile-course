@@ -86,9 +86,9 @@ adb install -r build/app/outputs/flutter-apk/app-debug.apk
 
 | Keadaan | Berkas | Isi |
 |---|---|---|
-| halaman kosong, kunci belum diatur | `screenshots/10-01-asisten-kosong.png` | status `Kunci: (belum diatur)`, penghitung `0/20` |
+| halaman kosong, kunci tersamar | `screenshots/10-01-asisten-kosong.png` | status `Kunci: sk-airo-bR******`, penghitung `0/20` |
 | jawaban dari API nyata | `screenshots/10-02-asisten-jawaban.png` | pertanyaan jam layanan, jawaban 3 kalimat, penghitung `1/20` |
-| gagal koneksi | `screenshots/10-03-asisten-fallback.png` | bilah `Tidak ada koneksi internet. Mode offline`, tombol `Coba lagi` |
+| gagal koneksi | `screenshots/10-03-asisten-offline-fallback.png` | bilah `Tidak ada koneksi internet. Mode offline`, tombol `Coba lagi` |
 
 Isi ketiga gambar dibaca ulang dengan OCR dan disimpan di
 `docs/screenshots-ocr.txt`, bukan disimpulkan dari nama berkas.
@@ -97,7 +97,7 @@ Isi ketiga gambar dibaca ulang dengan OCR dan disimpan di
 
 ```text
 $ flutter analyze
-No issues found! (ran in 84.5s)
+No issues found! (ran in 83.6s)
 
 $ flutter test
 00:26 +37: All tests passed!
