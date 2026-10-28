@@ -1,0 +1,5 @@
+# Bukti CI (GitHub Actions)
+
+- ci · event `push` · branch `develop` · status `completed` · hasil `failure` · https://github.com/adambahyn/244107020207-mobile-course/actions/runs/40622265475
+- ci · event `pull_request` · branch `chore/ci-workflow` · status `completed` · hasil `success` · https://github.com/adambahyn/244107020207-mobile-course/actions/runs/40622169780
+- job `verify`: `failure` (Complete job)
