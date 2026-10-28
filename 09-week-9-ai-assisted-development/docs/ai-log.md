@@ -87,7 +87,7 @@ kosongkan (semua muncul).
 |---|---|
 | 1 | Draf dibaca penuh; jalur berkas yang dipakai AI tidak cocok dengan struktur proyek (`domain/announcement.dart`, `domain/get_announcements.dart`, `data/announcement_repository_impl.dart`, `presentation/announcement_search_page.dart`). |
 | 2 | `grep -rn "package:flutter\|package:dio\|sqflite" lib/features/announcements/domain/` menghasilkan 0 baris: domain tetap murni. |
-| 3 | `flutter analyze` pada draf: **22 issue**, termasuk 5 `uri_does_not_exist`, `Undefined class 'Failure'`, dan `Undefined name 'announcementsProvider'`. Keluaran lengkap: `docs/analyze-ai-draft.txt`. |
+| 3 | `flutter analyze` pada draf: **19 issue**, termasuk 4 `uri_does_not_exist`, `Undefined class 'Failure'`, dan `Undefined name 'announcementsProvider'`. Keluaran lengkap: `docs/analyze-ai-draft.txt`. |
 | 4 | Setelah jalur berkas, import, dan lapisan diperbaiki: `No issues found!`. |
 | 5 | Empat test use case (`test/search_announcements_test.dart`) dan empat widget test (`test/announcement_search_page_test.dart`, termasuk cabang error) hijau; total suite **23 test lulus**. |
 | 6 | Uji manual di perangkat: query kosong, cocok, dan tidak cocok (`screenshots/09-01..03`). |
@@ -95,7 +95,7 @@ kosongkan (semua muncul).
 ### Halusinasi yang terbukti
 
 **Temuan 1 — jalur berkas dan API fiktif.** AI menulis import ke berkas yang
-tidak ada (`uri_does_not_exist` lima kali), memakai `Failure` tanpa import, dan
+tidak ada (`uri_does_not_exist` empat kali), memakai `Failure` tanpa import, dan
 memanggil `announcementsProvider` seolah modul lain. Bukti:
 `flutter analyze lib test` → 22 issue, tersimpan di `docs/analyze-ai-draft.txt`.
 Perbaikan: import disesuaikan dengan struktur nyata, `Failure` diimpor dari
@@ -120,7 +120,7 @@ Ringkasan keputusan:
 
 | Temuan | Level | Keputusan | Alasan teknis | Bukti |
 |---|---|---|---|---|
-| 1. Query global persisten, `TextField` tanpa controller, tampilan dan hasil tidak sinkron | blocker | **diterima, diperbaiki** | Query hidup selama aplikasi, sedangkan `TextField` baru selalu kosong: pengguna melihat daftar terfilter atau empty state untuk teks yang tidak ada di layar | Test merah `test/announcement_search_persistence_test.dart` gagal di baris 58 sebelum perbaikan (`docs/red-test-persistence.txt`), hijau setelah `autoDispose` |
+| 1. Query global persisten, `TextField` tanpa controller, tampilan dan hasil tidak sinkron | blocker | **diterima, diperbaiki** | Query hidup selama aplikasi, sedangkan `TextField` baru selalu kosong: pengguna melihat daftar terfilter atau empty state untuk teks yang tidak ada di layar | Test merah `test/announcement_search_persistence_test.dart` gagal di baris 60 sebelum perbaikan (`docs/red-test-persistence.txt`), hijau setelah `autoDispose` |
 | 2. Test widget tidak mengunci perilaku state query | saran | **diterima, diperbaiki** | Siklus tutup-buka halaman adalah sumber bug dan tidak tersentuh test lama | `test/announcement_search_persistence_test.dart` + test cabang error `Key('search-error')` |
 | 3. `searchAnnouncementsProvider` dianggap indirection tanpa dependensi, usul dihapus | saran | **ditolak** | Pola yang sama sudah dipakai `getAnnouncementsProvider` untuk use case stateless (`lib/features/announcements/presentation/providers/announcement_providers.dart` baris 14); menghapus satu-satunya use case yang memakai provider membuat dua gaya wiring dalam satu fitur, dan seam override hilang saat aturan filter tumbuh (debounce, riwayat query) | `grep -n "getAnnouncementsProvider = Provider" announcement_providers.dart` → baris 14 |
 
@@ -149,8 +149,8 @@ lengkap — bukti di `docs/red-test-persistence.txt`.
 
 ### Refleksi
 
-Halusinasi yang terbukti adalah jalur berkas fiktif: lima `uri_does_not_exist`
-dan satu `Failure` tanpa import, dibuktikan `flutter analyze` (22 issue) dan
+Halusinasi yang terbukti adalah jalur berkas fiktif: empat `uri_does_not_exist`
+dan satu `Failure` tanpa import, dibuktikan `flutter analyze` (19 issue) dan
 diperbaiki satu per satu sampai nol issue.
 
 Prompt yang paling membantu adalah versi 5 slot dengan kontrak repository

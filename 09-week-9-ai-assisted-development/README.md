@@ -68,13 +68,13 @@ adb install -r build/app/outputs/flutter-apk/app-debug.apk
 
 ```text
 $ flutter analyze
-No issues found! (ran in 7.6s)
+No issues found! (ran in 9.8s)
 
 $ dart format lib test --set-exit-if-changed
-Formatted 34 files (0 changed)
+Formatted 32 files (0 changed)
 
 $ flutter test
-00:15 +23: All tests passed!
+00:10 +23: All tests passed!
 ```
 
 Angka di atas dibaca dari keluaran perintah, bukan dari ingatan. Suite berisi
@@ -89,7 +89,7 @@ Angka di atas dibaca dari keluaran perintah, bukan dari ingatan. Suite berisi
    `domain/announcement.dart`, `domain/get_announcements.dart`, dan
    `data/announcement_repository_impl.dart` yang tidak ada di proyek, memakai
    `Failure` tanpa import, dan memanggil `announcementsProvider` yang tidak
-   diimpor. `flutter analyze` atas draf mentah menghasilkan **22 issue**
+   diimpor. `flutter analyze` atas draf mentah menghasilkan **19 issue**
    (`docs/analyze-ai-draft.txt`). Klaim "analyze 0 issue" dari AI gugur.
 2. **Filter salah lapisan.** Draf menaruh `where(...)` di provider
    presentation (`docs/ai-draft/1-announcement_search_provider.dart` baris 17),
@@ -100,7 +100,7 @@ Angka di atas dibaca dari keluaran perintah, bukan dari ingatan. Suite berisi
 3. **Bug state yang lolos dari klaim AI.** Query tersimpan di provider global
    sedangkan `TextField` tanpa controller, jadi halaman yang dibuka ulang
    tampil kosong tetapi daftarnya masih terfilter query lama. Bug dibuktikan
-   test merah lebih dulu (`docs/red-test-persistence.txt`, gagal di baris 58),
+   test merah lebih dulu (`docs/red-test-persistence.txt`, gagal di baris 60),
    lalu diperbaiki dengan `NotifierProvider.autoDispose` +
    `TextEditingController`. Usulan reviewer awal (satu `autoDispose`) belum
    cukup: `filteredAnnouncementsProvider` masih memegang listener, sehingga

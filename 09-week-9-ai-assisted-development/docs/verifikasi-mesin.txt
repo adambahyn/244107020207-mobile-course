@@ -1,0 +1,8 @@
+$ dart format --output=none --set-exit-if-changed lib test
+Formatted 32 files (0 changed) in 0.14 seconds.
+
+$ flutter analyze
+No issues found! (ran in 9.8s)
+
+$ flutter test
+00:10 +23: All tests passed!
