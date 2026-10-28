@@ -23,8 +23,9 @@ String formatTanggal(DateTime waktu) =>
 /// Token tidak pernah ditampilkan penuh: 12 karakter pertama + elipsis.
 String maskToken(String? token) {
   if (token == null || token.isEmpty) return '(kosong)';
-  if (token.length <= 12) return '${token.substring(0, 12)}…';
-  return '${token.substring(0, 12)}…';
+  const batas = 12;
+  final potong = token.length <= batas ? token : token.substring(0, batas);
+  return '$potong…';
 }
 
 /// RemoteMessage.data -> rute. Route tanpa garis miring depan diperbaiki.
