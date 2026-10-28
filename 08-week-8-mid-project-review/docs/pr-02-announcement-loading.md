@@ -1,6 +1,6 @@
 # PR: fix(announcements) — deep link tampilkan loader, bukan "belum tersedia"
 
-Cabang: `fix/announcement-loading-state` → `develop` · Berkas: 2 · +95 / −30
+PR #4 · cabang `fix/announcement-loading-state` → `develop` · Berkas: 2 · +95 / −30
 
 ## Masalah
 

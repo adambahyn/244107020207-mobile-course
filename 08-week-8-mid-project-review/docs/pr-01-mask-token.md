@@ -1,6 +1,6 @@
 # PR: fix(core) — maskToken tidak lagi RangeError untuk token pendek
 
-Cabang: `fix/mask-token-range` → `develop` · Berkas: 2 · +8 / −2
+PR #3 · cabang `fix/mask-token-range` → `develop` · Berkas: 2 · +8 / −2
 
 ## Masalah
 

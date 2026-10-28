@@ -18,18 +18,26 @@ hijau — bukan fitur baru.
 
 ## Peta issue dan PR
 
+Repository: <https://github.com/adambahyn/244107020207-mobile-course>
+
 | Item | Isi | Status |
 |------|-----|--------|
-| Issue #1 | `maskToken` melempar `RangeError` untuk token < 12 karakter | ditutup oleh PR `fix/mask-token-range` |
-| PR `fix/mask-token-range` | perbaikan + 2 test baru | 2 berkas, +8/−2 |
-| PR `fix/announcement-loading-state` | deep link tidak lagi mengklaim "belum tersedia" saat loading | 2 berkas, +95/−30 |
-| PR `chore/ci-workflow` | workflow `verify` untuk PR | 1 berkas, +20/−0 |
+| Issue [#1](https://github.com/adambahyn/244107020207-mobile-course/issues/1) | `maskToken` melempar `RangeError` untuk token < 12 karakter | closed oleh PR #3 |
+| Issue [#2](https://github.com/adambahyn/244107020207-mobile-course/issues/2) | Tidak ada CI: PR kotor bisa lolos | closed oleh PR #5 |
+| PR [#3](https://github.com/adambahyn/244107020207-mobile-course/pull/3) | `fix(core): maskToken tidak lagi RangeError` | merged (squash) · 2 berkas, +8/−2 |
+| PR [#4](https://github.com/adambahyn/244107020207-mobile-course/pull/4) | `fix(announcements): deep link tampilkan loader` | merged (squash) · 2 berkas, +95/−30 |
+| PR [#5](https://github.com/adambahyn/244107020207-mobile-course/pull/5) | `chore(ci): workflow verify untuk PR` | merged (squash) · 1 berkas, +20/−0 |
 
-Setiap PR berisi: masalah, solusi, cara uji, dan screenshot (template di
-`docs/pr-template.md`). Review dilakukan sendiri dengan dua peran terpisah —
-penulis dan reviewer — karena tidak ada rekan tim; hasil review, komentar, dan
-penyelesaiannya dicatat di `docs/pr-01-mask-token.md` dan
-`docs/pr-02-announcement-loading.md`.
+Setiap PR berisi: masalah, solusi, cara uji, dan dampak (template di
+`docs/pr-template.md`), plus komentar review yang ditulis dengan dua peran
+terpisah — penulis dan reviewer — karena tidak ada rekan tim. Rekaman lengkapnya
+di `docs/pr-01-mask-token.md`, `docs/pr-02-announcement-loading.md`, dan
+`docs/pr-03-ci-workflow.md`.
+
+Bukti CI: `docs/ci-run.txt` (run pada setiap PR dan pada push ke `develop`).
+Catatan jujur: run pertama setelah merge gagal di langkah
+`dart format --set-exit-if-changed` karena satu berkas test belum diformat;
+diperbaiki di commit `9b7d83c` dan run berikutnya hijau.
 
 ## Fitur utama (warisan Minggu 5–7)
 

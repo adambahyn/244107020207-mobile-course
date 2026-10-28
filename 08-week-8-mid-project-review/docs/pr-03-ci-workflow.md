@@ -1,6 +1,6 @@
 # PR: chore(ci) — workflow verify untuk PR
 
-Cabang: `chore/ci-workflow` → `develop` · Berkas: 1 · +20 / −0
+PR #5 · cabang `chore/ci-workflow` → `develop` · Berkas: 1 · +20 / −0
 
 ## Masalah
 
