@@ -1,0 +1,5 @@
+== sesudah load awal ==
+PSS=217287 KB  RSS=338704 KB
+== sesudah 5x (detail -> kembali) ==
+PSS=205227 KB  RSS=327605 KB
+  mCurrentFocus=Window{dfbd728 u0 com.example.campus_notify/com.example.campus_notify.MainActivity}
