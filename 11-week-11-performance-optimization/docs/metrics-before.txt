@@ -1,0 +1,9 @@
+== cold start (am start -W) ==
+TotalTime: 1687
+WaitTime: 1750
+  mCurrentFocus=Window{1deaa97 u0 com.example.campus_notify/com.example.campus_notify.MainActivity}
+== frame (FrameTiming, sama dengan sumber DevTools) ==
+11-06 14:51:05.398  9836  9836 I flutter : PERF|before|frame=403 jank=8(2.0%) avg=5.5ms build=0.7ms raster=3.6ms p90=7.4ms max=80.1ms
+11-06 14:51:07.398  9836  9836 I flutter : PERF|before|frame=404 jank=8(2.0%) avg=5.5ms build=0.7ms raster=3.6ms p90=7.4ms max=80.1ms
+== memori ==
+           TOTAL PSS:   233292            TOTAL RSS:   359196      TOTAL SWAP (KB):       52

@@ -26,6 +26,13 @@ desktop.ini
 # Python
 __pycache__/
 
+# Skrip pembangun laporan (lokal, tidak dipublikasikan)
+runjob.py
+gen_wc*.py
+isi_laporan*.py
+job-laporan*.json
+_ci_evidence.py
+
 # Logs & temp
 *.log
 *.tmp

@@ -118,7 +118,8 @@ Suite 37 test: 23 warisan Minggu 7 sampai 9, 3 test use case
 | Bukti OCR screenshot | `docs/screenshots-ocr.txt` |
 | Screenshot perangkat (Infinix X6851, 1080x2436) | `screenshots/` |
 | Laporan jobsheet | `Laporan Jobsheet Minggu 10 - Adam Bahy Maulana.docx` + `.pdf` |
-| Pembangun laporan (WordCraft) | `gen_wc10.py` + `job-laporan10.json` |
+
+Skrip pembangun laporan (WordCraft) bersifat lokal, tidak dipublikasikan.
 
 Salinan web codelab (`#10 _ Integrasi Fitur AI.html` dan folder `_files`) tidak
 dilacak git; pengaturannya ada di `.gitignore` folder ini.
