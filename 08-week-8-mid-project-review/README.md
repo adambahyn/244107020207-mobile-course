@@ -88,4 +88,4 @@ Bangun APK: `flutter build apk --debug`, lalu
 ```
 
 Laporan jobsheet: `Laporan Jobsheet Minggu 8 - Adam Bahy Maulana.docx` (+ `.pdf`),
-dibangun lewat WordCraft (`gen_wc8.py` → `job-laporan8.json`).
+dibangun lewat WordCraft. Skrip pembangunnya bersifat lokal (tidak di repo).

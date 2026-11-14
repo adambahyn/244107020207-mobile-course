@@ -120,7 +120,8 @@ ada di [`docs/ai-log.md`](docs/ai-log.md).
 | Keluaran test merah pembukti bug | `docs/red-test-persistence.txt` |
 | Screenshot perangkat (Infinix X6851, 1080x2436) | `screenshots/` |
 | Laporan jobsheet | `Laporan Jobsheet Minggu 9 - Adam Bahy Maulana.docx` + `.pdf` |
-| Perintah pembangun laporan (WordCraft) | `gen_wc9.py` + `job-laporan9.json` |
+
+Skrip pembangun laporan (WordCraft) bersifat lokal, tidak dipublikasikan.
 
 Salinan web codelab (`#09 _ ...html` dan folder `_files`) tidak dilacak git;
 pengaturannya ada di `.gitignore` folder ini.
